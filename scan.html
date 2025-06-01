@@ -1835,8 +1835,8 @@
     else if (percentage < 50) advies = 'Er is veel ruimte voor verbetering. We adviseren een quickscan of adviesgesprek om prioriteiten te bepalen.';
     else if (percentage < 75) advies = 'De basis staat, maar er zijn zichtbare ontwikkelkansen. Een verbetersessie kan richting geven.';
     else advies = 'Goed op weg! Mogelijk zijn er nog optimalisaties in data, duurzaamheid of samenwerking.';
+    document.getElementById('scoreText').innerHTML = '🎯 Je totaalscore is <strong>' + percentage.toFixed(1) + '%</strong><br>' + feedback + '<br><br><em>' + advies + '</em>';
     
-document.getElementById('scoreText').innerHTML = '🎯 Je totaalscore is <strong>' + percentage.toFixed(1) + '%</strong><br>' + feedback + '<br><br><em>' + advies + '</em>'; '🎯 Je totaalscore is <strong>' + percentage.toFixed(1) + '%</strong><br>' + feedback;
       document.getElementById('scoreBox').classList.remove('hidden');
     }
   </script>
