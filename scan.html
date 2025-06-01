@@ -1,0 +1,1844 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Vastgoedscan Chatbot | Bakermat Vastgoedmanagement</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+    .chat-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .chat-message {
+      margin: 20px 0;
+    }
+    .bot {
+      color: #222;
+      background-color: #eef1f7;
+      border-radius: 10px;
+      padding: 15px;
+      display: inline-block;
+    }
+    .option-btn {
+      background: #002776;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin: 5px 10px 5px 0;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    .score-box {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #e2f7e2;
+      border-left: 5px solid #2e7d32;
+    }
+    .final-message {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .contact-link {
+      background-color: #002776;
+      color: white;
+      padding: 12px 20px;
+      display: inline-block;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 15px;
+    }
+    .vraagblok {
+      margin: 40px 0;
+      padding: 20px;
+      border-radius: 12px;
+      background-color: #f0f4ff;
+      box-shadow: 0 0 6px rgba(0,0,0,0.05);
+    }
+    .vraagblok-header {
+      font-size: 20px;
+      font-weight: bold;
+      color: #002776;
+      margin-bottom: 15px;
+    }
+    .subkop {
+      font-size: 16px;
+      font-weight: bold;
+      color: #444;
+      margin: 20px 0 10px 0;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container" id="chat">
+    
+    <div class="chat-message bot" id="q0">
+      <h2>Welkom bij de Vastgoedscan van Bakermat Vastgoedmanagement</h2>
+      <p>
+        Goed vastgoedbeheer vraagt om overzicht, structuur en strategisch inzicht. Met deze scan brengen we op gestructureerde wijze in kaart hoe professioneel jouw vastgoedbeheerorganisatie is ingericht.
+      </p>
+      <p>
+        De scan is gebaseerd op 9 hoofdonderwerpen binnen het vastgoedbeheer, waaronder beleid, processen, onderhoud, informatiebeheer, duurzaamheid en contractmanagement.
+        Elk onderwerp is opgedeeld in 3 niveaus: <strong>Strategisch</strong>, <strong>Tactisch</strong> en <strong>Operationeel</strong>, met telkens 5 vragen per niveau.
+      </p>
+      <p>
+        Het doel van deze scan is niet alleen inzicht verkrijgen, maar ook richting geven aan mogelijke verbeteringen. Je ontvangt aan het einde een totaalscore met reflectie én de uitnodiging om samen te sparren over vervolgstappen.
+      </p>
+      <p>
+        Klik op de knop hieronder om te starten.
+      </p>
+    </div>
+    <div id="a0">
+      <button class="option-btn" onclick="answer(0, 0)">🚀 Start de Vastgoedscan</button>
+    </div>
+
+      Welkom bij de <strong>Vastgoedscan</strong> van Bakermat Vastgoedmanagement!<br><br>
+      Je doorloopt 135 vragen, verdeeld over 9 hoofdonderwerpen en 3 niveaus.<br>
+      Kies bij elke vraag het antwoord dat het beste past bij jouw organisatie.<br><br>
+      Laten we starten!
+    </div>
+    <div id="a0">
+      <button class="option-btn" onclick="answer(0, 100)">A</button>
+      <button class="option-btn" onclick="answer(0, 75)">B</button>
+      <button class="option-btn" onclick="answer(0, 50)">C</button>
+      <button class="option-btn" onclick="answer(0, 25)">D</button>
+      <button class="option-btn" onclick="answer(0, 0)">E</button>
+    </div>
+
+<div class="vraagblok">
+  <div class="vraagblok-header">1. Algemeen (Organisatie en capaciteit)</div>
+  <div class="subkop">Strategisch</div>
+
+<div class="subkop">Strategisch</div>
+
+            <div class="chat-message bot hidden" id="q0">
+              <strong>Vraag 1:</strong> Welke langetermijnvisie heeft Saxenburgh op de rol van vastgoedbeheer binnen de organisatie?
+            </div>
+            <div id="a0" class="hidden">
+              <button class="option-btn" onclick="answer(0, 100)">A: Er is een integrale visie op vastgoedbeheer als strategisch organisatieonderdeel.</button>
+              <button class="option-btn" onclick="answer(0, 75)">B: Er is een visie geformuleerd en vertaald in beleidsdoelen.</button>
+              <button class="option-btn" onclick="answer(0, 50)">C: Er zijn uitgangspunten, maar zonder structurele vertaling naar beleid.</button>
+              <button class="option-btn" onclick="answer(0, 25)">D: Vastgoedbeheer wordt vooral als operationele functie gezien.</button>
+              <button class="option-btn" onclick="answer(0, 0)">E: Er is geen langetermijnvisie op vastgoedbeheer.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q1">
+              <strong>Vraag 2:</strong> Hoe verhoudt de huidige positionering van Beheer & Onderhoud zich tot strategische ambities?
+            </div>
+            <div id="a1" class="hidden">
+              <button class="option-btn" onclick="answer(1, 100)">A: B&O is actief betrokken bij beleidsontwikkeling en strategische besluitvorming.</button>
+              <button class="option-btn" onclick="answer(1, 75)">B: B&O ondersteunt beleidsdoelen vanuit een duidelijke adviesrol.</button>
+              <button class="option-btn" onclick="answer(1, 50)">C: Er is enige aansluiting tussen B&O en strategie.</button>
+              <button class="option-btn" onclick="answer(1, 25)">D: B&O is voornamelijk uitvoerend gepositioneerd.</button>
+              <button class="option-btn" onclick="answer(1, 0)">E: Er is geen relatie tussen B&O en strategisch beleid.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q2">
+              <strong>Vraag 3:</strong> Wat is de visie op regie versus uitvoering binnen de vastgoedorganisatie?
+            </div>
+            <div id="a2" class="hidden">
+              <button class="option-btn" onclick="answer(2, 100)">A: Er is een duidelijke regierol gedefinieerd, met uitbesteding van uitvoering.</button>
+              <button class="option-btn" onclick="answer(2, 75)">B: Er is een basisvisie op regie, maar deze is beperkt uitgewerkt.</button>
+              <button class="option-btn" onclick="answer(2, 50)">C: Regie en uitvoering zijn deels gescheiden, maar niet formeel vastgelegd.</button>
+              <button class="option-btn" onclick="answer(2, 25)">D: Beide rollen worden vermengd uitgevoerd door dezelfde functionarissen.</button>
+              <button class="option-btn" onclick="answer(2, 0)">E: Er is geen visie of onderscheid tussen regie en uitvoering.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q3">
+              <strong>Vraag 4:</strong> Hoe worden toekomstige personele capaciteiten en competenties geprognosticeerd?
+            </div>
+            <div id="a3" class="hidden">
+              <button class="option-btn" onclick="answer(3, 100)">A: Er is een strategische capaciteitsplanning afgestemd op vastgoedontwikkelingen.</button>
+              <button class="option-btn" onclick="answer(3, 75)">B: Prognoses worden jaarlijks opgesteld met inbreng van HR en vastgoedbeheer.</button>
+              <button class="option-btn" onclick="answer(3, 50)">C: Capaciteitsplanning vindt plaats op basis van bestaande bezetting.</button>
+              <button class="option-btn" onclick="answer(3, 25)">D: Er is geen systematische prognose van capaciteit of competentieontwikkeling.</button>
+              <button class="option-btn" onclick="answer(3, 0)">E: Toekomstige capaciteitsbehoefte wordt niet geanalyseerd of vastgelegd.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q4">
+              <strong>Vraag 5:</strong> Op welke wijze wordt vastgoedbeheer verbonden aan organisatiedoelen?
+            </div>
+            <div id="a4" class="hidden">
+              <button class="option-btn" onclick="answer(4, 100)">A: Vastgoedbeheer is integraal onderdeel van organisatiedoelen en KPI’s.</button>
+              <button class="option-btn" onclick="answer(4, 75)">B: Er is afstemming tussen vastgoedbeheer en afdelingsdoelen.</button>
+              <button class="option-btn" onclick="answer(4, 50)">C: Er is informele afstemming met andere beleidsvelden.</button>
+              <button class="option-btn" onclick="answer(4, 25)">D: De relatie tussen vastgoed en organisatiedoelen is onduidelijk.</button>
+              <button class="option-btn" onclick="answer(4, 0)">E: Er is geen koppeling tussen vastgoedbeheer en organisatiedoelen.</button>
+            </div>
+            
+<div class="subkop">Tactisch</div>
+
+            <div class="chat-message bot hidden" id="q5">
+              <strong>Vraag 6:</strong> Hoe wordt opvolging van sleutelrollen binnen het team Beheer & Onderhoud voorbereid?
+            </div>
+            <div id="a5" class="hidden">
+              <button class="option-btn" onclick="answer(5, 100)">A: Er is een opvolgingsplan met kennisoverdracht, mentoring en vastgelegde procedures.</button>
+              <button class="option-btn" onclick="answer(5, 75)">B: Er zijn afspraken over vervanging en overdracht bij uitval of vertrek.</button>
+              <button class="option-btn" onclick="answer(5, 50)">C: Opvolging wordt ad hoc geregeld op basis van beschikbare capaciteit.</button>
+              <button class="option-btn" onclick="answer(5, 25)">D: Er is onduidelijkheid over opvolging bij sleutelrollen.</button>
+              <button class="option-btn" onclick="answer(5, 0)">E: Er is geen voorbereiding of opvolgingsstructuur aanwezig.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q6">
+              <strong>Vraag 7:</strong> Bestaat er een opleidingsplan voor medewerkers in vastgoedbeheer?
+            </div>
+            <div id="a6" class="hidden">
+              <button class="option-btn" onclick="answer(6, 100)">A: Er is een meerjarig opleidingsplan gekoppeld aan strategische doelen en functies.</button>
+              <button class="option-btn" onclick="answer(6, 75)">B: Jaarlijks worden opleidingsbehoeften geïnventariseerd en ingepland.</button>
+              <button class="option-btn" onclick="answer(6, 50)">C: Er zijn losse trainingen zonder structureel plan.</button>
+              <button class="option-btn" onclick="answer(6, 25)">D: Opleiding gebeurt op verzoek en niet structureel vastgelegd.</button>
+              <button class="option-btn" onclick="answer(6, 0)">E: Er is geen opleidingsplan beschikbaar.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q7">
+              <strong>Vraag 8:</strong> Op welke manier vindt kennisborging plaats bij functiewisselingen?
+            </div>
+            <div id="a7" class="hidden">
+              <button class="option-btn" onclick="answer(7, 100)">A: Kennisoverdracht is geborgd via formats, systemen en gestructureerde overdracht.</button>
+              <button class="option-btn" onclick="answer(7, 75)">B: Overdracht gebeurt via interne afspraken of begeleiding door collega’s.</button>
+              <button class="option-btn" onclick="answer(7, 50)">C: Er is beperkte borging; veel kennis zit in hoofden van medewerkers.</button>
+              <button class="option-btn" onclick="answer(7, 25)">D: Kennisoverdracht is afhankelijk van beschikbaarheid of goodwill.</button>
+              <button class="option-btn" onclick="answer(7, 0)">E: Er is geen systematische borging van kennis bij functiewisselingen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q8">
+              <strong>Vraag 9:</strong> Hoe is de taakverdeling en rolverdeling binnen het team georganiseerd?
+            </div>
+            <div id="a8" class="hidden">
+              <button class="option-btn" onclick="answer(8, 100)">A: Er is een heldere en formeel vastgelegde taak- en rolverdeling.</button>
+              <button class="option-btn" onclick="answer(8, 75)">B: Taken zijn verdeeld per persoon, maar niet formeel vastgelegd.</button>
+              <button class="option-btn" onclick="answer(8, 50)">C: Taken zijn globaal verdeeld op basis van specialisme of ervaring.</button>
+              <button class="option-btn" onclick="answer(8, 25)">D: Er is veel overlap of onduidelijkheid in rollen en taken.</button>
+              <button class="option-btn" onclick="answer(8, 0)">E: Er is geen duidelijke taak- of rolverdeling binnen het team.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q9">
+              <strong>Vraag 10:</strong> Welke werkprocessen zijn formeel vastgelegd?
+            </div>
+            <div id="a9" class="hidden">
+              <button class="option-btn" onclick="answer(9, 100)">A: Alle kernprocessen zijn beschreven, gecommuniceerd en geborgd in beleid.</button>
+              <button class="option-btn" onclick="answer(9, 75)">B: De meeste processen zijn vastgelegd in formats of protocollen.</button>
+              <button class="option-btn" onclick="answer(9, 50)">C: Enkele processen zijn beschreven, zonder uniform format.</button>
+              <button class="option-btn" onclick="answer(9, 25)">D: Processen zijn informeel bekend en mondeling afgestemd.</button>
+              <button class="option-btn" onclick="answer(9, 0)">E: Er zijn geen formeel vastgelegde werkprocessen.</button>
+            </div>
+            
+<div class="subkop">Operationeel</div>
+
+            <div class="chat-message bot hidden" id="q10">
+              <strong>Vraag 11:</strong> Hoeveel fte zijn actief in vastgoedbeheer en welke functies zijn aanwezig?
+            </div>
+            <div id="a10" class="hidden">
+              <button class="option-btn" onclick="answer(10, 100)">A: Er is een volledig team met duidelijk omschreven functies en voldoende capaciteit.</button>
+              <button class="option-btn" onclick="answer(10, 75)">B: De meeste functies zijn ingevuld, met enige capaciteitstekorten.</button>
+              <button class="option-btn" onclick="answer(10, 50)">C: Enkele functies zijn belegd; andere worden gecombineerd of ontbreken.</button>
+              <button class="option-btn" onclick="answer(10, 25)">D: Er is sprake van onderbezetting en onduidelijkheid over rollen.</button>
+              <button class="option-btn" onclick="answer(10, 0)">E: Er is geen zicht op bezetting of functies binnen vastgoedbeheer.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q11">
+              <strong>Vraag 12:</strong> Welke concrete taken vallen onder het team Beheer & Onderhoud?
+            </div>
+            <div id="a11" class="hidden">
+              <button class="option-btn" onclick="answer(11, 100)">A: Alle relevante taken zijn afgebakend en structureel belegd binnen het team.</button>
+              <button class="option-btn" onclick="answer(11, 75)">B: De meeste taken zijn toegewezen, maar overlappen soms met andere teams.</button>
+              <button class="option-btn" onclick="answer(11, 50)">C: Taken zijn beperkt omschreven en deels operationeel ingevuld.</button>
+              <button class="option-btn" onclick="answer(11, 25)">D: Er is geen duidelijkheid over welke taken binnen het team vallen.</button>
+              <button class="option-btn" onclick="answer(11, 0)">E: Er zijn geen concrete taken vastgelegd voor het team.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q12">
+              <strong>Vraag 13:</strong> Wordt gewerkt met taak- en functieomschrijvingen per rol?
+            </div>
+            <div id="a12" class="hidden">
+              <button class="option-btn" onclick="answer(12, 100)">A: Voor elke functie is een actuele taak- en functieomschrijving beschikbaar.</button>
+              <button class="option-btn" onclick="answer(12, 75)">B: De meeste functies zijn beschreven in functiematrices of profielen.</button>
+              <button class="option-btn" onclick="answer(12, 50)">C: Er zijn slechts globale taakomschrijvingen beschikbaar.</button>
+              <button class="option-btn" onclick="answer(12, 25)">D: Taakverdeling is mondeling afgesproken, zonder formele beschrijving.</button>
+              <button class="option-btn" onclick="answer(12, 0)">E: Er zijn geen functie- of taakomschrijvingen beschikbaar.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q13">
+              <strong>Vraag 14:</strong> Op welke manier worden overdrachten en vervanging geregeld?
+            </div>
+            <div id="a13" class="hidden">
+              <button class="option-btn" onclick="answer(13, 100)">A: Er zijn vaste procedures en vervangingsregelingen met overdrachtsdocumenten.</button>
+              <button class="option-btn" onclick="answer(13, 75)">B: Er zijn afspraken over overdracht bij afwezigheid of verlof.</button>
+              <button class="option-btn" onclick="answer(13, 50)">C: Overdracht gebeurt ad hoc of bij knelpunten.</button>
+              <button class="option-btn" onclick="answer(13, 25)">D: Vervanging is afhankelijk van beschikbare collega’s, zonder proces.</button>
+              <button class="option-btn" onclick="answer(13, 0)">E: Er is geen regeling voor overdracht of vervanging.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q14">
+              <strong>Vraag 15:</strong> Hoe worden werkpakketten gemonitord op haalbaarheid?
+            </div>
+            <div id="a14" class="hidden">
+              <button class="option-btn" onclick="answer(14, 100)">A: Er is een planningssysteem waarin voortgang, capaciteit en urgentie worden bewaakt.</button>
+              <button class="option-btn" onclick="answer(14, 75)">B: Monitoring gebeurt via teamoverleg en visuele overzichten.</button>
+              <button class="option-btn" onclick="answer(14, 50)">C: Werkverdeling is zichtbaar via planningen, maar zonder structurele monitoring.</button>
+              <button class="option-btn" onclick="answer(14, 25)">D: Beoordeling gebeurt handmatig of via ervaring per medewerker.</button>
+              <button class="option-btn" onclick="answer(14, 0)">E: Er is geen monitoring van werkpakketten op haalbaarheid.</button>
+            </div>
+            
+</div>
+<div class="vraagblok"><div class="vraagblok-header">Vastgoedstrategie en onderhoudsbeleid</div>
+<div class="subkop">Strategisch</div>
+
+            <div class="chat-message bot hidden" id="q15">
+              <strong>Vraag 16:</strong> Is er een Strategisch Vastgoedplan aanwezig dat voorziet in de komende 10 jaar?
+            </div>
+            <div id="a15" class="hidden">
+              <button class="option-btn" onclick="answer(15, 100)">A: Ja, er is een vastgesteld plan met concrete doelen, maatregelen en investeringsstrategie.</button>
+              <button class="option-btn" onclick="answer(15, 75)">B: Er is een plan in concept of opgesteld, maar nog niet vastgesteld.</button>
+              <button class="option-btn" onclick="answer(15, 50)">C: Er is een visie of beleidsnotitie, maar geen strategisch uitgewerkt plan.</button>
+              <button class="option-btn" onclick="answer(15, 25)">D: Er zijn losse strategische richtingen benoemd, zonder samenhangend plan.</button>
+              <button class="option-btn" onclick="answer(15, 0)">E: Er is geen Strategisch Vastgoedplan beschikbaar.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q16">
+              <strong>Vraag 17:</strong> Worden investeringskeuzes afgestemd op demografische en zorginhoudelijke ontwikkelingen?
+            </div>
+            <div id="a16" class="hidden">
+              <button class="option-btn" onclick="answer(16, 100)">A: Ja, investeringsbesluiten zijn onderbouwd met demografische en zorganalyses.</button>
+              <button class="option-btn" onclick="answer(16, 75)">B: Er is structurele afstemming met zorgontwikkeling bij grote investeringen.</button>
+              <button class="option-btn" onclick="answer(16, 50)">C: Soms worden zorgtrends meegenomen, maar niet structureel.</button>
+              <button class="option-btn" onclick="answer(16, 25)">D: Afstemming gebeurt ad hoc of achteraf.</button>
+              <button class="option-btn" onclick="answer(16, 0)">E: Er is geen afstemming op demografie of zorginhoud.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q17">
+              <strong>Vraag 18:</strong> Hoe wordt de vastgoedstrategie gekoppeld aan duurzaamheid en klimaatdoelstellingen?
+            </div>
+            <div id="a17" class="hidden">
+              <button class="option-btn" onclick="answer(17, 100)">A: Strategie is integraal verbonden met duurzaamheidsdoelstellingen en klimaatadaptatie.</button>
+              <button class="option-btn" onclick="answer(17, 75)">B: Er is beleidsmatige koppeling met duurzaamheid, maar uitvoering is beperkt.</button>
+              <button class="option-btn" onclick="answer(17, 50)">C: Duurzaamheid is opgenomen als principe, maar niet uitgewerkt.</button>
+              <button class="option-btn" onclick="answer(17, 25)">D: Er is weinig samenhang tussen vastgoed en duurzaamheid.</button>
+              <button class="option-btn" onclick="answer(17, 0)">E: Er is geen koppeling tussen vastgoedstrategie en duurzaamheid.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q18">
+              <strong>Vraag 19:</strong> Wat zijn de kernwaarden van het vastgoedbeleid op concernniveau?
+            </div>
+            <div id="a18" class="hidden">
+              <button class="option-btn" onclick="answer(18, 100)">A: Kernwaarden zijn vastgesteld en worden expliciet toegepast in besluitvorming.</button>
+              <button class="option-btn" onclick="answer(18, 75)">B: Er zijn benoemde waarden, maar zonder duidelijke toepassing.</button>
+              <button class="option-btn" onclick="answer(18, 50)">C: Waarden zijn impliciet zichtbaar, maar niet benoemd of onderbouwd.</button>
+              <button class="option-btn" onclick="answer(18, 25)">D: Er zijn richtlijnen, maar geen kernwaarden geformuleerd.</button>
+              <button class="option-btn" onclick="answer(18, 0)">E: Er zijn geen kernwaarden gedefinieerd voor vastgoedbeleid.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q19">
+              <strong>Vraag 20:</strong> Welke scenario's worden meegenomen in strategische vastgoedplanning?
+            </div>
+            <div id="a19" class="hidden">
+              <button class="option-btn" onclick="answer(19, 100)">A: Er is een scenarioplanning opgenomen met meerdere varianten en risicosimulaties.</button>
+              <button class="option-btn" onclick="answer(19, 75)">B: Er wordt gewerkt met enkele scenario’s bij grote projecten.</button>
+              <button class="option-btn" onclick="answer(19, 50)">C: Scenario’s zijn beperkt tot verwachte groei of krimp.</button>
+              <button class="option-btn" onclick="answer(19, 25)">D: Planningen worden zonder expliciete scenario’s opgesteld.</button>
+              <button class="option-btn" onclick="answer(19, 0)">E: Er wordt geen scenarioplanning toegepast.</button>
+            </div>
+            
+<div class="subkop">Tactisch</div>
+
+            <div class="chat-message bot hidden" id="q20">
+              <strong>Vraag 21:</strong> Is er een onderhoudsbeleid waarin kaders en spelregels voor beheer en onderhoud zijn vastgelegd?
+            </div>
+            <div id="a20" class="hidden">
+              <button class="option-btn" onclick="answer(20, 100)">A: Er is een vastgesteld beleid met duidelijke kaders, taken en verantwoordelijkheden.</button>
+              <button class="option-btn" onclick="answer(20, 75)">B: Er is een beleidsdocument, maar dit wordt beperkt toegepast.</button>
+              <button class="option-btn" onclick="answer(20, 50)">C: Er zijn uitgangspunten vastgelegd, maar zonder concrete toepassing.</button>
+              <button class="option-btn" onclick="answer(20, 25)">D: Er zijn slechts mondelinge afspraken over onderhoudsaanpak.</button>
+              <button class="option-btn" onclick="answer(20, 0)">E: Er is geen onderhoudsbeleid beschikbaar.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q21">
+              <strong>Vraag 22:</strong> Hoe worden prijs/kwaliteit-verhoudingen afgewogen in onderhoudsbesluiten?
+            </div>
+            <div id="a21" class="hidden">
+              <button class="option-btn" onclick="answer(21, 100)">A: Er wordt gewerkt met afwegingskaders en toetsingscriteria bij onderhoudsbesluiten.</button>
+              <button class="option-btn" onclick="answer(21, 75)">B: Besluiten worden genomen op basis van ervaring en onderbouwde inschatting.</button>
+              <button class="option-btn" onclick="answer(21, 50)">C: Prijs/kwaliteit wordt incidenteel meegenomen in besluitvorming.</button>
+              <button class="option-btn" onclick="answer(21, 25)">D: Afweging gebeurt informeel en zonder vaste onderbouwing.</button>
+              <button class="option-btn" onclick="answer(21, 0)">E: Er is geen structurele afweging tussen prijs en kwaliteit.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q22">
+              <strong>Vraag 23:</strong> Zijn er afspraken vastgelegd over de demarcatie tussen zorg en vastgoed?
+            </div>
+            <div id="a22" class="hidden">
+              <button class="option-btn" onclick="answer(22, 100)">A: Demarcatie is vastgelegd in beleid en operationeel eenduidig doorgevoerd.</button>
+              <button class="option-btn" onclick="answer(22, 75)">B: Er zijn afspraken op hoofdlijnen, maar niet volledig geïmplementeerd.</button>
+              <button class="option-btn" onclick="answer(22, 50)">C: Demarcatie is informeel bepaald en verschilt per locatie of project.</button>
+              <button class="option-btn" onclick="answer(22, 25)">D: Er is vaak discussie over verantwoordelijkheden tussen zorg en vastgoed.</button>
+              <button class="option-btn" onclick="answer(22, 0)">E: Er zijn geen afspraken over demarcatie.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q23">
+              <strong>Vraag 24:</strong> Op welke wijze worden investeringen in onderhoud verantwoord?
+            </div>
+            <div id="a23" class="hidden">
+              <button class="option-btn" onclick="answer(23, 100)">A: Investeringen worden getoetst aan criteria zoals levensduur, veiligheid en duurzaamheid.</button>
+              <button class="option-btn" onclick="answer(23, 75)">B: Verantwoording vindt plaats via investeringsvoorstellen en terugkoppeling.</button>
+              <button class="option-btn" onclick="answer(23, 50)">C: Besluiten worden beperkt onderbouwd op basis van urgentie.</button>
+              <button class="option-btn" onclick="answer(23, 25)">D: Verantwoording is ad hoc en zonder duidelijke criteria.</button>
+              <button class="option-btn" onclick="answer(23, 0)">E: Er is geen verantwoording van onderhoudsinvesteringen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q24">
+              <strong>Vraag 25:</strong> Is er afstemming tussen strategisch beleid en MJOP?
+            </div>
+            <div id="a24" class="hidden">
+              <button class="option-btn" onclick="answer(24, 100)">A: Het MJOP is expliciet afgestemd op strategisch beleid en scenario’s.</button>
+              <button class="option-btn" onclick="answer(24, 75)">B: Strategie en MJOP worden jaarlijks tegen elkaar gehouden.</button>
+              <button class="option-btn" onclick="answer(24, 50)">C: MJOP en strategie sluiten deels op elkaar aan, zonder structurele evaluatie.</button>
+              <button class="option-btn" onclick="answer(24, 25)">D: Afstemming is beperkt of incidenteel.</button>
+              <button class="option-btn" onclick="answer(24, 0)">E: Er is geen koppeling tussen MJOP en strategisch beleid.</button>
+            </div>
+            
+<div class="subkop">Operationeel</div>
+
+            <div class="chat-message bot hidden" id="q25">
+              <strong>Vraag 26:</strong> Worden objecten geclassificeerd op basis van onderhoudsniveau?
+            </div>
+            <div id="a25" class="hidden">
+              <button class="option-btn" onclick="answer(25, 100)">A: Alle objecten zijn geclassificeerd met duidelijke normen en onderhoudsniveaus.</button>
+              <button class="option-btn" onclick="answer(25, 75)">B: De meeste objecten zijn geclassificeerd, maar niet altijd actueel.</button>
+              <button class="option-btn" onclick="answer(25, 50)">C: Er is een globale classificatie zonder gedetailleerde normering.</button>
+              <button class="option-btn" onclick="answer(25, 25)">D: Classificatie gebeurt incidenteel of projectmatig.</button>
+              <button class="option-btn" onclick="answer(25, 0)">E: Er vindt geen classificatie plaats van objecten.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q26">
+              <strong>Vraag 27:</strong> Hoe actueel zijn de beleidsdocumenten binnen vastgoedbeheer?
+            </div>
+            <div id="a26" class="hidden">
+              <button class="option-btn" onclick="answer(26, 100)">A: Beleid is binnen 2 jaar herzien en sluit aan bij actuele ontwikkelingen.</button>
+              <button class="option-btn" onclick="answer(26, 75)">B: De meeste documenten zijn actueel, enkele zijn verouderd.</button>
+              <button class="option-btn" onclick="answer(26, 50)">C: Een deel van het beleid is verouderd en niet afgestemd op praktijk.</button>
+              <button class="option-btn" onclick="answer(26, 25)">D: Er is veel achterstallig onderhoud aan beleidsdocumenten.</button>
+              <button class="option-btn" onclick="answer(26, 0)">E: Er zijn geen actuele beleidsdocumenten beschikbaar.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q27">
+              <strong>Vraag 28:</strong> Op welke manier worden wijzigingen in beleid gedeeld met de uitvoerende teams?
+            </div>
+            <div id="a27" class="hidden">
+              <button class="option-btn" onclick="answer(27, 100)">A: Wijzigingen worden actief gecommuniceerd via intranet, mail én overlegmomenten.</button>
+              <button class="option-btn" onclick="answer(27, 75)">B: Belangrijke wijzigingen worden gedeeld in teamoverleg of via e-mail.</button>
+              <button class="option-btn" onclick="answer(27, 50)">C: Informatie wordt mondeling doorgegeven bij projecten of uitvoering.</button>
+              <button class="option-btn" onclick="answer(27, 25)">D: Wijzigingen worden beperkt gedeeld en vaak pas achteraf gecommuniceerd.</button>
+              <button class="option-btn" onclick="answer(27, 0)">E: Er is geen structurele communicatie over beleidswijzigingen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q28">
+              <strong>Vraag 29:</strong> Zijn verantwoordelijkheden rondom onderhoudsbesluiten eenduidig vastgelegd?
+            </div>
+            <div id="a28" class="hidden">
+              <button class="option-btn" onclick="answer(28, 100)">A: Taken en bevoegdheden zijn duidelijk beschreven in rollen en processen.</button>
+              <button class="option-btn" onclick="answer(28, 75)">B: De meeste verantwoordelijkheden zijn vastgelegd in formats of documenten.</button>
+              <button class="option-btn" onclick="answer(28, 50)">C: Verantwoordelijkheden zijn deels vastgelegd, maar niet altijd actueel of bekend.</button>
+              <button class="option-btn" onclick="answer(28, 25)">D: Er is veel onduidelijkheid over verantwoordelijkheden bij besluiten.</button>
+              <button class="option-btn" onclick="answer(28, 0)">E: Er zijn geen afspraken over wie verantwoordelijk is voor besluiten.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q29">
+              <strong>Vraag 30:</strong> Worden afwijkingen in uitvoering ten opzichte van beleid geëvalueerd?
+            </div>
+            <div id="a29" class="hidden">
+              <button class="option-btn" onclick="answer(29, 100)">A: Afwijkingen worden structureel geëvalueerd, gedocumenteerd en besproken.</button>
+              <button class="option-btn" onclick="answer(29, 75)">B: De meeste afwijkingen worden besproken bij afronding van projecten.</button>
+              <button class="option-btn" onclick="answer(29, 50)">C: Evaluatie vindt plaats als problemen of klachten optreden.</button>
+              <button class="option-btn" onclick="answer(29, 25)">D: Afwijkingen worden meestal niet geëvalueerd of vastgelegd.</button>
+              <button class="option-btn" onclick="answer(29, 0)">E: Er is geen structuur of aandacht voor afwijkingen t.o.v. beleid.</button>
+            </div>
+            
+</div>
+<div class="vraagblok"><div class="vraagblok-header">Budget en exploitatie</div>
+<div class="subkop">Strategisch</div>
+
+            <div class="chat-message bot hidden" id="q30">
+              <strong>Vraag 31:</strong> Hoe sluit het onderhoudsbudget aan bij de meerjaren vastgoedstrategie?
+            </div>
+            <div id="a30" class="hidden">
+              <button class="option-btn" onclick="answer(30, 100)">A: Volledig afgestemd: onderhoudsbudget is onderdeel van de strategische vastgoedplanning.</button>
+              <button class="option-btn" onclick="answer(30, 75)">B: Grotendeels afgestemd, met jaarlijkse toetsing op strategische doelen.</button>
+              <button class="option-btn" onclick="answer(30, 50)">C: Er is enige afstemming, maar zonder structurele koppeling.</button>
+              <button class="option-btn" onclick="answer(30, 25)">D: Het budget volgt historische patronen zonder strategische toetsing.</button>
+              <button class="option-btn" onclick="answer(30, 0)">E: Er is geen afstemming tussen onderhoudsbudget en vastgoedstrategie.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q31">
+              <strong>Vraag 32:</strong> Welke lange termijn investeringsreserves zijn beschikbaar voor onderhoud?
+            </div>
+            <div id="a31" class="hidden">
+              <button class="option-btn" onclick="answer(31, 100)">A: Er is een meerjarenreserve vastgelegd met jaarlijkse actualisatie en indexatie.</button>
+              <button class="option-btn" onclick="answer(31, 75)">B: Er is een onderhoudsvoorziening beschikbaar op basis van MJOP.</button>
+              <button class="option-btn" onclick="answer(31, 50)">C: Er is een globale reserve, maar deze is niet structureel onderbouwd.</button>
+              <button class="option-btn" onclick="answer(31, 25)">D: Er is slechts beperkte ruimte voor langetermijnonderhoud.</button>
+              <button class="option-btn" onclick="answer(31, 0)">E: Er zijn geen investeringsreserves voor onderhoud beschikbaar.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q32">
+              <strong>Vraag 33:</strong> Hoe wordt de verhouding tussen investerings- en exploitatiekosten bewaakt?
+            </div>
+            <div id="a32" class="hidden">
+              <button class="option-btn" onclick="answer(32, 100)">A: Er is actief financieel management met periodieke analyses op balans en ratio's.</button>
+              <button class="option-btn" onclick="answer(32, 75)">B: Er is jaarlijks inzicht in de verhouding met terugkoppeling aan vastgoedbeheer.</button>
+              <button class="option-btn" onclick="answer(32, 50)">C: De verhouding wordt incidenteel besproken of geanalyseerd.</button>
+              <button class="option-btn" onclick="answer(32, 25)">D: Er is beperkt zicht op de verhouding tussen investerings- en exploitatiekosten.</button>
+              <button class="option-btn" onclick="answer(32, 0)">E: Er wordt geen onderscheid of bewaking toegepast op deze kosten.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q33">
+              <strong>Vraag 34:</strong> Wat is het beleid rondom onderhoudsvoorzieningen per locatie?
+            </div>
+            <div id="a33" class="hidden">
+              <button class="option-btn" onclick="answer(33, 100)">A: Elke locatie heeft een vastgestelde voorziening afgestemd op het MJOP en risico's.</button>
+              <button class="option-btn" onclick="answer(33, 75)">B: Voorzieningen zijn per locatie berekend, maar niet altijd actueel.</button>
+              <button class="option-btn" onclick="answer(33, 50)">C: Er is een generiek voorzieningsbedrag per locatie.</button>
+              <button class="option-btn" onclick="answer(33, 25)">D: Er is geen duidelijk beleid, voorzieningen zijn ad hoc.</button>
+              <button class="option-btn" onclick="answer(33, 0)">E: Er zijn geen onderhoudsvoorzieningen per locatie.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q34">
+              <strong>Vraag 35:</strong> Is er een integrale begroting waarin vastgoedkosten volledig inzichtelijk zijn?
+            </div>
+            <div id="a34" class="hidden">
+              <button class="option-btn" onclick="answer(34, 100)">A: Alle vastgoedkosten zijn integraal opgenomen in een gespecificeerde begroting.</button>
+              <button class="option-btn" onclick="answer(34, 75)">B: De meeste kosten zijn opgenomen, maar niet volledig gespecificeerd.</button>
+              <button class="option-btn" onclick="answer(34, 50)">C: Kosten zijn deels inzichtelijk via verschillende bronnen.</button>
+              <button class="option-btn" onclick="answer(34, 25)">D: Er is beperkt overzicht, met risico op dubbele of ontbrekende posten.</button>
+              <button class="option-btn" onclick="answer(34, 0)">E: Er is geen integraal overzicht van vastgoedkosten.</button>
+            </div>
+            
+<div class="subkop">Tactisch</div>
+
+            <div class="chat-message bot hidden" id="q35">
+              <strong>Vraag 36:</strong> Wordt er gestuurd op basis van een verplichtingenadministratie binnen onderhoud?
+            </div>
+            <div id="a35" class="hidden">
+              <button class="option-btn" onclick="answer(35, 100)">A: Er is een actueel overzicht van verplichtingen gekoppeld aan begroting en planning.</button>
+              <button class="option-btn" onclick="answer(35, 75)">B: Verplichtingen worden bijgehouden, maar niet structureel gekoppeld aan alle posten.</button>
+              <button class="option-btn" onclick="answer(35, 50)">C: Er is een handmatige administratie zonder integratie in systemen.</button>
+              <button class="option-btn" onclick="answer(35, 25)">D: Verplichtingen worden deels vastgelegd, maar niet actief gemonitord.</button>
+              <button class="option-btn" onclick="answer(35, 0)">E: Er is geen verplichtingenadministratie aanwezig.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q36">
+              <strong>Vraag 37:</strong> Hoe vaak vindt afstemming plaats met de financiële afdeling over realisatie?
+            </div>
+            <div id="a36" class="hidden">
+              <button class="option-btn" onclick="answer(36, 100)">A: Er is maandelijkse afstemming met rapportages en prognose bijstellingen.</button>
+              <button class="option-btn" onclick="answer(36, 75)">B: Afstemming vindt per kwartaal plaats met gezamenlijke analyse.</button>
+              <button class="option-btn" onclick="answer(36, 50)">C: Er is jaarlijks overleg bij het opstellen van de begroting.</button>
+              <button class="option-btn" onclick="answer(36, 25)">D: Overleg is incidenteel of bij knelpunten.</button>
+              <button class="option-btn" onclick="answer(36, 0)">E: Er is geen structurele afstemming met de financiële afdeling.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q37">
+              <strong>Vraag 38:</strong> Welke instrumenten worden gebruikt voor monitoring van onderhoudsbudgetten?
+            </div>
+            <div id="a37" class="hidden">
+              <button class="option-btn" onclick="answer(37, 100)">A: Er is een dashboard of systeem met realtime inzicht in budgetten en realisatie.</button>
+              <button class="option-btn" onclick="answer(37, 75)">B: Excel-overzichten en periodieke rapportages worden gebruikt.</button>
+              <button class="option-btn" onclick="answer(37, 50)">C: Monitoring vindt plaats via losse bestanden of projectadministratie.</button>
+              <button class="option-btn" onclick="answer(37, 25)">D: Er is beperkt inzicht in actuele besteding.</button>
+              <button class="option-btn" onclick="answer(37, 0)">E: Er zijn geen instrumenten voor monitoring beschikbaar.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q38">
+              <strong>Vraag 39:</strong> Is de begrotingsstructuur eenduidig voor verschillende soorten onderhoud?
+            </div>
+            <div id="a38" class="hidden">
+              <button class="option-btn" onclick="answer(38, 100)">A: Onderhoud is gescheiden per type (correctief, preventief, vervangend) en gebudgetteerd per locatie.</button>
+              <button class="option-btn" onclick="answer(38, 75)">B: Er is onderscheid gemaakt, maar niet volledig doorgevoerd in de administratie.</button>
+              <button class="option-btn" onclick="answer(38, 50)">C: Er is beperkte scheiding, vooral tussen klein en groot onderhoud.</button>
+              <button class="option-btn" onclick="answer(38, 25)">D: Begroting is generiek opgezet zonder onderscheid per type.</button>
+              <button class="option-btn" onclick="answer(38, 0)">E: Er is geen eenduidige begrotingsstructuur voor onderhoud.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q39">
+              <strong>Vraag 40:</strong> Hoe worden MJOP-kosten verwerkt in jaarplannen?
+            </div>
+            <div id="a39" class="hidden">
+              <button class="option-btn" onclick="answer(39, 100)">A: Kosten worden jaarlijks doorgerekend, opgenomen in de begroting en toegewezen aan projecten.</button>
+              <button class="option-btn" onclick="answer(39, 75)">B: De meeste MJOP-kosten worden vertaald naar jaarplannen, maar niet volledig.</button>
+              <button class="option-btn" onclick="answer(39, 50)">C: Slechts grote posten worden jaarlijks verwerkt.</button>
+              <button class="option-btn" onclick="answer(39, 25)">D: Verwerking is incidenteel en afhankelijk van beschikbare middelen.</button>
+              <button class="option-btn" onclick="answer(39, 0)">E: MJOP-kosten worden niet expliciet meegenomen in jaarplannen.</button>
+            </div>
+            
+<div class="subkop">Operationeel</div>
+
+            <div class="chat-message bot hidden" id="q40">
+              <strong>Vraag 41:</strong> Wie is verantwoordelijk voor het opstellen van de onderhoudsbegroting?
+            </div>
+            <div id="a40" class="hidden">
+              <button class="option-btn" onclick="answer(40, 100)">A: Een vaste functionaris met kennis van MJOP en uitvoering stelt de begroting op.</button>
+              <button class="option-btn" onclick="answer(40, 75)">B: De begroting wordt opgesteld door het team Beheer & Onderhoud in samenwerking met financiën.</button>
+              <button class="option-btn" onclick="answer(40, 50)">C: Begroting wordt jaarlijks samengesteld op basis van input van verschillende afdelingen.</button>
+              <button class="option-btn" onclick="answer(40, 25)">D: Er is geen eenduidige verantwoordelijke; de begroting wordt samengesteld ad hoc.</button>
+              <button class="option-btn" onclick="answer(40, 0)">E: Er is geen duidelijke verantwoordelijkheidsverdeling voor de begroting.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q41">
+              <strong>Vraag 42:</strong> Hoe wordt de uitvoering van het budget gemonitord tijdens het jaar?
+            </div>
+            <div id="a41" class="hidden">
+              <button class="option-btn" onclick="answer(41, 100)">A: Er is een structurele monitoring met maandelijkse rapportages en bijsturing.</button>
+              <button class="option-btn" onclick="answer(41, 75)">B: Monitoring gebeurt elk kwartaal op basis van realisatie versus planning.</button>
+              <button class="option-btn" onclick="answer(41, 50)">C: Er is jaarlijkse monitoring bij het opstellen van de nieuwe begroting.</button>
+              <button class="option-btn" onclick="answer(41, 25)">D: Monitoring gebeurt alleen bij grote afwijkingen of knelpunten.</button>
+              <button class="option-btn" onclick="answer(41, 0)">E: Er vindt geen actieve monitoring van het onderhoudsbudget plaats.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q42">
+              <strong>Vraag 43:</strong> Worden onverwachte uitgaven gecategoriseerd en verantwoord?
+            </div>
+            <div id="a42" class="hidden">
+              <button class="option-btn" onclick="answer(42, 100)">A: Alle afwijkingen worden gecategoriseerd, geanalyseerd en verantwoord aan het management.</button>
+              <button class="option-btn" onclick="answer(42, 75)">B: Meeste uitgaven worden verantwoord, maar categorisering is beperkt.</button>
+              <button class="option-btn" onclick="answer(42, 50)">C: Onverwachte uitgaven worden gemeld, maar zonder formele analyse.</button>
+              <button class="option-btn" onclick="answer(42, 25)">D: Verantwoording gebeurt incidenteel en is afhankelijk van interne druk.</button>
+              <button class="option-btn" onclick="answer(42, 0)">E: Onverwachte uitgaven worden niet verantwoord of geanalyseerd.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q43">
+              <strong>Vraag 44:</strong> Op welke manier worden budgetoverschrijdingen hersteld?
+            </div>
+            <div id="a43" class="hidden">
+              <button class="option-btn" onclick="answer(43, 100)">A: Er is een procedure voor herschikking en bijstelling van budgetten inclusief escalatie.</button>
+              <button class="option-btn" onclick="answer(43, 75)">B: Overschrijdingen worden hersteld door herschaling van andere posten of reserves.</button>
+              <button class="option-btn" onclick="answer(43, 50)">C: Herstel gebeurt op projectniveau zonder integrale aanpak.</button>
+              <button class="option-btn" onclick="answer(43, 25)">D: Er is weinig structuur in het herstel van overschrijdingen.</button>
+              <button class="option-btn" onclick="answer(43, 0)">E: Overschrijdingen blijven onbeheerd of worden geaccepteerd.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q44">
+              <strong>Vraag 45:</strong> Hoe wordt omgegaan met het verschuiven van posten tussen jaren?
+            </div>
+            <div id="a44" class="hidden">
+              <button class="option-btn" onclick="answer(44, 100)">A: Er is een meerjarenoverzicht met doorlopende posten en gemotiveerde verschuivingen.</button>
+              <button class="option-btn" onclick="answer(44, 75)">B: Posten worden doorgeschoven met toelichting in het jaarplan.</button>
+              <button class="option-btn" onclick="answer(44, 50)">C: Verschuivingen zijn toegestaan, maar zonder duidelijke verantwoording.</button>
+              <button class="option-btn" onclick="answer(44, 25)">D: Posten worden stilzwijgend doorgeschoven of vervallen.</button>
+              <button class="option-btn" onclick="answer(44, 0)">E: Er is geen overzicht of controle op verschuivingen tussen jaren.</button>
+            </div>
+            
+</div>
+<div class="vraagblok"><div class="vraagblok-header">MJOP en jaarbegroting</div>
+<div class="subkop">Strategisch</div>
+
+            <div class="chat-message bot hidden" id="q45">
+              <strong>Vraag 46:</strong> Hoe wordt het MJOP gebruikt als strategisch planningsinstrument binnen Saxenburgh?
+            </div>
+            <div id="a45" class="hidden">
+              <button class="option-btn" onclick="answer(45, 100)">A: MJOP is leidend voor lange termijn planning, investeringen en beleidsvorming.</button>
+              <button class="option-btn" onclick="answer(45, 75)">B: MJOP wordt regelmatig betrokken bij strategische keuzes.</button>
+              <button class="option-btn" onclick="answer(45, 50)">C: MJOP wordt incidenteel gebruikt bij beleidsbeslissingen.</button>
+              <button class="option-btn" onclick="answer(45, 25)">D: Gebruik van MJOP beperkt zich tot operationele planning.</button>
+              <button class="option-btn" onclick="answer(45, 0)">E: MJOP wordt niet gebruikt als strategisch instrument.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q46">
+              <strong>Vraag 47:</strong> Wat is de relatie tussen MJOP, strategisch vastgoedbeleid en meerjarenbegroting?
+            </div>
+            <div id="a46" class="hidden">
+              <button class="option-btn" onclick="answer(46, 100)">A: Er is een directe koppeling tussen MJOP, beleid en financiële prognoses.</button>
+              <button class="option-btn" onclick="answer(46, 75)">B: Er is afstemming aanwezig, maar niet structureel vastgelegd.</button>
+              <button class="option-btn" onclick="answer(46, 50)">C: De relatie is zwak en vooral informele koppeling.</button>
+              <button class="option-btn" onclick="answer(46, 25)">D: MJOP en beleidskaders worden los van elkaar opgesteld.</button>
+              <button class="option-btn" onclick="answer(46, 0)">E: Er is geen relatie tussen MJOP, beleid en begroting.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q47">
+              <strong>Vraag 48:</strong> Op welke manier ondersteunt het MJOP besluitvorming op concernniveau?
+            </div>
+            <div id="a47" class="hidden">
+              <button class="option-btn" onclick="answer(47, 100)">A: MJOP biedt inzicht in risico’s, investeringsbehoeften en strategische spreiding.</button>
+              <button class="option-btn" onclick="answer(47, 75)">B: MJOP wordt gebruikt als referentie bij grote besluiten.</button>
+              <button class="option-btn" onclick="answer(47, 50)">C: MJOP wordt soms betrokken bij bestuurlijke overleggen.</button>
+              <button class="option-btn" onclick="answer(47, 25)">D: MJOP speelt een marginale rol in concernbesluitvorming.</button>
+              <button class="option-btn" onclick="answer(47, 0)">E: MJOP is geen onderdeel van concernniveau besluitvorming.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q48">
+              <strong>Vraag 49:</strong> Hoe worden duurzaamheid en energiebesparing geïntegreerd in het MJOP?
+            </div>
+            <div id="a48" class="hidden">
+              <button class="option-btn" onclick="answer(48, 100)">A: Deze zijn structureel verwerkt in scenario’s, maatregelen en prioritering.</button>
+              <button class="option-btn" onclick="answer(48, 75)">B: Er is aandacht voor duurzaamheid in specifieke onderdelen.</button>
+              <button class="option-btn" onclick="answer(48, 50)">C: Enkele duurzaamheidsmaatregelen zijn opgenomen, zonder integratie.</button>
+              <button class="option-btn" onclick="answer(48, 25)">D: Duurzaamheid wordt incidenteel meegenomen in updates.</button>
+              <button class="option-btn" onclick="answer(48, 0)">E: Er is geen aandacht voor duurzaamheid in het MJOP.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q49">
+              <strong>Vraag 50:</strong> Is er een integrale cyclus voor herziening en actualisatie van het MJOP?
+            </div>
+            <div id="a49" class="hidden">
+              <button class="option-btn" onclick="answer(49, 100)">A: Er is een vaste cyclus van herziening met jaarlijkse en meerjarige updates.</button>
+              <button class="option-btn" onclick="answer(49, 75)">B: Het MJOP wordt periodiek herzien, maar niet volgens vast ritme.</button>
+              <button class="option-btn" onclick="answer(49, 50)">C: Herziening gebeurt ad hoc bij grote wijzigingen of projecten.</button>
+              <button class="option-btn" onclick="answer(49, 25)">D: MJOP wordt zelden geactualiseerd.</button>
+              <button class="option-btn" onclick="answer(49, 0)">E: Er is geen cyclus of proces voor herziening van het MJOP.</button>
+            </div>
+            
+<div class="subkop">Tactisch</div>
+
+            <div class="chat-message bot hidden" id="q50">
+              <strong>Vraag 51:</strong> Wordt jaarlijks een vertaalslag gemaakt van het MJOP naar een uitvoeringsplan?
+            </div>
+            <div id="a50" class="hidden">
+              <button class="option-btn" onclick="answer(50, 100)">A: Ja, jaarlijks wordt het MJOP vertaald naar een gedetailleerd uitvoeringsplan met budget.</button>
+              <button class="option-btn" onclick="answer(50, 75)">B: Een vertaalslag vindt plaats, maar niet altijd volledig of actueel.</button>
+              <button class="option-btn" onclick="answer(50, 50)">C: Er zijn plannen, maar deze zijn beperkt gekoppeld aan het MJOP.</button>
+              <button class="option-btn" onclick="answer(50, 25)">D: Uitvoering wordt ad hoc georganiseerd zonder formele vertaling.</button>
+              <button class="option-btn" onclick="answer(50, 0)">E: Er is geen jaarlijkse vertaling van MJOP naar uitvoering.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q51">
+              <strong>Vraag 52:</strong> Hoe vindt afstemming plaats tussen MJOP en afdelingsbegroting?
+            </div>
+            <div id="a51" class="hidden">
+              <button class="option-btn" onclick="answer(51, 100)">A: Afstemming is structureel onderdeel van het begrotingsproces.</button>
+              <button class="option-btn" onclick="answer(51, 75)">B: Er is jaarlijks overleg over aansluiting tussen MJOP en begroting.</button>
+              <button class="option-btn" onclick="answer(51, 50)">C: Soms is er afstemming, afhankelijk van projectgrootte of urgentie.</button>
+              <button class="option-btn" onclick="answer(51, 25)">D: Er is weinig tot geen afstemming tussen MJOP en begroting.</button>
+              <button class="option-btn" onclick="answer(51, 0)">E: Beide processen staan volledig los van elkaar.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q52">
+              <strong>Vraag 53:</strong> Zijn er vaste verantwoordelijken voor het updaten van het MJOP per discipline?
+            </div>
+            <div id="a52" class="hidden">
+              <button class="option-btn" onclick="answer(52, 100)">A: Er zijn vaste personen per discipline met heldere rollen en verantwoordelijkheden.</button>
+              <button class="option-btn" onclick="answer(52, 75)">B: Er is een hoofdverantwoordelijke met ondersteuning vanuit afdelingen.</button>
+              <button class="option-btn" onclick="answer(52, 50)">C: Actualisatie gebeurt incidenteel door verschillende medewerkers.</button>
+              <button class="option-btn" onclick="answer(52, 25)">D: Er is onduidelijkheid over wie verantwoordelijk is.</button>
+              <button class="option-btn" onclick="answer(52, 0)">E: Niemand is formeel verantwoordelijk voor actualisatie.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q53">
+              <strong>Vraag 54:</strong> Worden leveranciers betrokken bij het actualiseren van het MJOP?
+            </div>
+            <div id="a53" class="hidden">
+              <button class="option-btn" onclick="answer(53, 100)">A: Leveranciers leveren structureel input bij evaluatie en actualisatie.</button>
+              <button class="option-btn" onclick="answer(53, 75)">B: Er wordt periodiek afstemming gezocht bij grote updates.</button>
+              <button class="option-btn" onclick="answer(53, 50)">C: Leveranciers worden soms geraadpleegd bij specifieke onderdelen.</button>
+              <button class="option-btn" onclick="answer(53, 25)">D: Input van leveranciers wordt beperkt gebruikt.</button>
+              <button class="option-btn" onclick="answer(53, 0)">E: Leveranciers worden niet betrokken bij het MJOP.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q54">
+              <strong>Vraag 55:</strong> Is het MJOP opgebouwd per locatie of centraal op portefeuilleniveau?
+            </div>
+            <div id="a54" class="hidden">
+              <button class="option-btn" onclick="answer(54, 100)">A: MJOP is gedetailleerd per locatie met centrale consolidatie en sturing.</button>
+              <button class="option-btn" onclick="answer(54, 75)">B: Er is opbouw per locatie, maar zonder centrale sturing.</button>
+              <button class="option-btn" onclick="answer(54, 50)">C: MJOP is globaal centraal opgesteld zonder lokale verdieping.</button>
+              <button class="option-btn" onclick="answer(54, 25)">D: Het MJOP kent een beperkte opbouw en structuur.</button>
+              <button class="option-btn" onclick="answer(54, 0)">E: Er is geen zicht op de opbouw van het MJOP.</button>
+            </div>
+            
+<div class="subkop">Operationeel</div>
+
+            <div class="chat-message bot hidden" id="q55">
+              <strong>Vraag 56:</strong> In welk systeem wordt het MJOP beheerd (bijv. O-Prognose)?
+            </div>
+            <div id="a55" class="hidden">
+              <button class="option-btn" onclick="answer(55, 100)">A: MJOP wordt beheerd in een professioneel systeem met koppelingen en analysefunctionaliteit.</button>
+              <button class="option-btn" onclick="answer(55, 75)">B: Er wordt gebruikgemaakt van een standaard MJOP-systeem zoals O-Prognose.</button>
+              <button class="option-btn" onclick="answer(55, 50)">C: Het MJOP wordt bijgehouden in Excel of vergelijkbare tool.</button>
+              <button class="option-btn" onclick="answer(55, 25)">D: MJOP wordt versnipperd beheerd zonder vast systeem.</button>
+              <button class="option-btn" onclick="answer(55, 0)">E: Er is geen systeem voor beheer van het MJOP.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q56">
+              <strong>Vraag 57:</strong> Hoe worden wijzigingen of mutaties in het MJOP verwerkt?
+            </div>
+            <div id="a56" class="hidden">
+              <button class="option-btn" onclick="answer(56, 100)">A: Wijzigingen worden centraal bijgehouden met duidelijke logging en revisiebeheer.</button>
+              <button class="option-btn" onclick="answer(56, 75)">B: Mutaties worden handmatig ingevoerd na overleg of akkoord.</button>
+              <button class="option-btn" onclick="answer(56, 50)">C: Wijzigingen worden incidenteel verwerkt op verzoek.</button>
+              <button class="option-btn" onclick="answer(56, 25)">D: Er is onduidelijkheid over hoe wijzigingen worden doorgevoerd.</button>
+              <button class="option-btn" onclick="answer(56, 0)">E: Wijzigingen worden niet systematisch bijgehouden.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q57">
+              <strong>Vraag 58:</strong> Hoe worden projectopleveringen toegevoegd aan het MJOP?
+            </div>
+            <div id="a57" class="hidden">
+              <button class="option-btn" onclick="answer(57, 100)">A: Nieuwe objecten worden na oplevering direct verwerkt in het MJOP met detailinformatie.</button>
+              <button class="option-btn" onclick="answer(57, 75)">B: Opleveringen worden periodiek toegevoegd aan het MJOP.</button>
+              <button class="option-btn" onclick="answer(57, 50)">C: Toevoeging gebeurt handmatig op initiatief van betrokken medewerkers.</button>
+              <button class="option-btn" onclick="answer(57, 25)">D: Projecten worden soms vergeten of te laat verwerkt.</button>
+              <button class="option-btn" onclick="answer(57, 0)">E: Er is geen proces voor toevoeging van projectopleveringen aan het MJOP.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q58">
+              <strong>Vraag 59:</strong> Worden jaarlijkse prioriteiten uit het MJOP geborgd in planning en realisatie?
+            </div>
+            <div id="a58" class="hidden">
+              <button class="option-btn" onclick="answer(58, 100)">A: Ja, prioriteiten worden vertaald naar een uitvoeringsplanning met monitoring.</button>
+              <button class="option-btn" onclick="answer(58, 75)">B: De meeste prioriteiten worden opgenomen in jaarplannen.</button>
+              <button class="option-btn" onclick="answer(58, 50)">C: Enkele prioriteiten worden opgevolgd, zonder vastgelegde planning.</button>
+              <button class="option-btn" onclick="answer(58, 25)">D: Prioriteiten worden beperkt geborgd en zijn afhankelijk van capaciteit.</button>
+              <button class="option-btn" onclick="answer(58, 0)">E: Er is geen borging van prioriteiten in uitvoering.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q59">
+              <strong>Vraag 60:</strong> Worden uitgevoerde MJOP-werkzaamheden geëvalueerd op inhoud en planning?
+            </div>
+            <div id="a59" class="hidden">
+              <button class="option-btn" onclick="answer(59, 100)">A: Alle werkzaamheden worden geëvalueerd op planning, inhoud en afwijkingen.</button>
+              <button class="option-btn" onclick="answer(59, 75)">B: De meeste grote werkzaamheden worden geëvalueerd.</button>
+              <button class="option-btn" onclick="answer(59, 50)">C: Evaluatie gebeurt beperkt en is niet structureel.</button>
+              <button class="option-btn" onclick="answer(59, 25)">D: Evaluatie vindt alleen plaats bij klachten of vertragingen.</button>
+              <button class="option-btn" onclick="answer(59, 0)">E: Er is geen evaluatie van MJOP-werkzaamheden.</button>
+            </div>
+            
+</div>
+<div class="vraagblok"><div class="vraagblok-header">Bedrijfsprocessen & uitvoering</div>
+<div class="subkop">Strategisch</div>
+
+            <div class="chat-message bot hidden" id="q60">
+              <strong>Vraag 61:</strong> Welke rol speelt Beheer & Onderhoud in de integrale vastgoedprojecten van Saxenburgh?
+            </div>
+            <div id="a60" class="hidden">
+              <button class="option-btn" onclick="answer(60, 100)">A: B&O is integraal betrokken vanaf initiatiefase tot oplevering met sturende rol.</button>
+              <button class="option-btn" onclick="answer(60, 75)">B: B&O wordt actief betrokken bij de meeste projecten vanaf ontwerp of uitvoering.</button>
+              <button class="option-btn" onclick="answer(60, 50)">C: B&O is incidenteel betrokken bij uitvoering of nazorg.</button>
+              <button class="option-btn" onclick="answer(60, 25)">D: B&O wordt slechts geïnformeerd bij de oplevering.</button>
+              <button class="option-btn" onclick="answer(60, 0)">E: B&O speelt geen rol in vastgoedprojecten.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q61">
+              <strong>Vraag 62:</strong> Hoe sluit uitvoering van onderhoud aan op de organisatiedoelstellingen?
+            </div>
+            <div id="a61" class="hidden">
+              <button class="option-btn" onclick="answer(61, 100)">A: Onderhoud is expliciet afgestemd op strategische doelstellingen en gebruikerswensen.</button>
+              <button class="option-btn" onclick="answer(61, 75)">B: Er is periodieke afstemming tussen uitvoering en beleid.</button>
+              <button class="option-btn" onclick="answer(61, 50)">C: Er is enige aansluiting op organisatiedoelen, maar niet structureel.</button>
+              <button class="option-btn" onclick="answer(61, 25)">D: Aansluiting is beperkt tot individuele projecten.</button>
+              <button class="option-btn" onclick="answer(61, 0)">E: Er is geen relatie tussen onderhoud en organisatiedoelstellingen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q62">
+              <strong>Vraag 63:</strong> Is er een visie op ketensamenwerking met leveranciers en interne diensten?
+            </div>
+            <div id="a62" class="hidden">
+              <button class="option-btn" onclick="answer(62, 100)">A: Er is een duidelijke visie, met afspraken over verantwoordelijkheden en samenwerking.</button>
+              <button class="option-btn" onclick="answer(62, 75)">B: Er wordt gestuurd op samenwerking, maar visie is niet formeel vastgelegd.</button>
+              <button class="option-btn" onclick="answer(62, 50)">C: Samenwerking is vooral praktisch en niet beleidsmatig onderbouwd.</button>
+              <button class="option-btn" onclick="answer(62, 25)">D: Visie is afwezig, samenwerking verloopt ad hoc.</button>
+              <button class="option-btn" onclick="answer(62, 0)">E: Er is geen sprake van ketensamenwerking.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q63">
+              <strong>Vraag 64:</strong> Hoe wordt gestuurd op integraliteit tussen projecten, onderhoud en gebruikerswensen?
+            </div>
+            <div id="a63" class="hidden">
+              <button class="option-btn" onclick="answer(63, 100)">A: Er is een integrale aanpak met centrale regie en structureel overleg.</button>
+              <button class="option-btn" onclick="answer(63, 75)">B: Afstemming vindt plaats bij start van projecten en op verzoek.</button>
+              <button class="option-btn" onclick="answer(63, 50)">C: Er is beperkte afstemming, afhankelijk van capaciteit en betrokkenheid.</button>
+              <button class="option-btn" onclick="answer(63, 25)">D: Er is weinig verbinding tussen gebruikers, onderhoud en projecten.</button>
+              <button class="option-btn" onclick="answer(63, 0)">E: Integraliteit ontbreekt volledig in de aansturing.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q64">
+              <strong>Vraag 65:</strong> Wordt gewerkt met prestatie-indicatoren op procesniveau?
+            </div>
+            <div id="a64" class="hidden">
+              <button class="option-btn" onclick="answer(64, 100)">A: Er zijn KPI’s per proces, met monitoring en rapportage op uitvoering en kwaliteit.</button>
+              <button class="option-btn" onclick="answer(64, 75)">B: KPI’s zijn geformuleerd, maar niet voor elk proces actief gevolgd.</button>
+              <button class="option-btn" onclick="answer(64, 50)">C: Er zijn enkele indicatoren in gebruik bij specifieke processen.</button>
+              <button class="option-btn" onclick="answer(64, 25)">D: Prestaties worden ad hoc beoordeeld zonder vaste indicatoren.</button>
+              <button class="option-btn" onclick="answer(64, 0)">E: Er wordt niet gewerkt met prestatie-indicatoren.</button>
+            </div>
+            
+<div class="subkop">Tactisch</div>
+
+            <div class="chat-message bot hidden" id="q65">
+              <strong>Vraag 66:</strong> Zijn de processen voor meldingen, storingen, klein onderhoud en projecten vastgelegd?
+            </div>
+            <div id="a65" class="hidden">
+              <button class="option-btn" onclick="answer(65, 100)">A: Alle processen zijn vastgelegd, gedocumenteerd en beschikbaar voor betrokkenen.</button>
+              <button class="option-btn" onclick="answer(65, 75)">B: De meeste processen zijn beschreven, maar verspreid of beperkt actueel.</button>
+              <button class="option-btn" onclick="answer(65, 50)">C: Er is slechts gedeeltelijke vastlegging van processen.</button>
+              <button class="option-btn" onclick="answer(65, 25)">D: Procesbeschrijvingen zijn informeel en niet geactualiseerd.</button>
+              <button class="option-btn" onclick="answer(65, 0)">E: Er is geen formele vastlegging van processen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q66">
+              <strong>Vraag 67:</strong> Hoe is de escalatielijn ingericht bij structurele klachten of problemen?
+            </div>
+            <div id="a66" class="hidden">
+              <button class="option-btn" onclick="answer(66, 100)">A: Er is een duidelijk protocol met escalatiefasen, verantwoordelijkheden en opvolging.</button>
+              <button class="option-btn" onclick="answer(66, 75)">B: Er is een basisprocedure voor escalaties, maar toepassing verschilt per situatie.</button>
+              <button class="option-btn" onclick="answer(66, 50)">C: Escalatie gebeurt op initiatief van medewerkers zonder vaste structuur.</button>
+              <button class="option-btn" onclick="answer(66, 25)">D: Problemen worden meestal opgelost binnen het team zonder formele lijn.</button>
+              <button class="option-btn" onclick="answer(66, 0)">E: Er is geen escalatielijn of procedure vastgelegd.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q67">
+              <strong>Vraag 68:</strong> Worden procesafspraken periodiek geëvalueerd?
+            </div>
+            <div id="a67" class="hidden">
+              <button class="option-btn" onclick="answer(67, 100)">A: Er is een vaste evaluatiecyclus met verbetermaatregelen en terugkoppeling.</button>
+              <button class="option-btn" onclick="answer(67, 75)">B: Afspraken worden geëvalueerd na afronding van projecten of jaarlijks.</button>
+              <button class="option-btn" onclick="answer(67, 50)">C: Evaluatie vindt plaats bij knelpunten of op verzoek.</button>
+              <button class="option-btn" onclick="answer(67, 25)">D: Afspraken worden zelden geëvalueerd.</button>
+              <button class="option-btn" onclick="answer(67, 0)">E: Er vindt geen evaluatie van processen plaats.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q68">
+              <strong>Vraag 69:</strong> Hoe worden kleine projecten onderscheiden van groot onderhoud?
+            </div>
+            <div id="a68" class="hidden">
+              <button class="option-btn" onclick="answer(68, 100)">A: Er zijn duidelijke criteria, formats en besluitlijnen vastgelegd in beleid.</button>
+              <button class="option-btn" onclick="answer(68, 75)">B: Projecten worden beoordeeld op basis van omvang en kosten.</button>
+              <button class="option-btn" onclick="answer(68, 50)">C: Er is enige scheiding op basis van inschatting door coördinator of team.</button>
+              <button class="option-btn" onclick="answer(68, 25)">D: Verschil wordt impliciet gemaakt zonder heldere criteria.</button>
+              <button class="option-btn" onclick="answer(68, 0)">E: Er is geen onderscheid tussen kleine projecten en onderhoud.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q69">
+              <strong>Vraag 70:</strong> Welke taken zijn mandaat-technisch gedelegeerd aan locaties?
+            </div>
+            <div id="a69" class="hidden">
+              <button class="option-btn" onclick="answer(69, 100)">A: Taken, budgetten en verantwoordelijkheden zijn vastgelegd per locatie.</button>
+              <button class="option-btn" onclick="answer(69, 75)">B: Er zijn mandaten toegekend, maar niet altijd eenduidig gecommuniceerd.</button>
+              <button class="option-btn" onclick="answer(69, 50)">C: Locaties hebben enige autonomie, maar geen formele mandaten.</button>
+              <button class="option-btn" onclick="answer(69, 25)">D: Besluiten worden centraal genomen, met beperkte ruimte voor locaties.</button>
+              <button class="option-btn" onclick="answer(69, 0)">E: Er is geen sprake van mandatering aan locaties.</button>
+            </div>
+            
+<div class="subkop">Operationeel</div>
+
+            <div class="chat-message bot hidden" id="q70">
+              <strong>Vraag 71:</strong> Hoe worden meldingen geregistreerd en opgevolgd (bijv. via AFAS)?
+            </div>
+            <div id="a70" class="hidden">
+              <button class="option-btn" onclick="answer(70, 100)">A: Meldingen worden digitaal geregistreerd, geprioriteerd en opgevolgd via een systeem zoals AFAS.</button>
+              <button class="option-btn" onclick="answer(70, 75)">B: De meeste meldingen worden via een digitaal systeem geregistreerd en opgevolgd.</button>
+              <button class="option-btn" onclick="answer(70, 50)">C: Er is registratie aanwezig, maar opvolging gebeurt deels buiten het systeem.</button>
+              <button class="option-btn" onclick="answer(70, 25)">D: Meldingen worden vooral handmatig of via e-mail verwerkt.</button>
+              <button class="option-btn" onclick="answer(70, 0)">E: Er is geen structurele registratie of opvolging van meldingen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q71">
+              <strong>Vraag 72:</strong> Wat is de gemiddelde doorlooptijd van een melding of storing?
+            </div>
+            <div id="a71" class="hidden">
+              <button class="option-btn" onclick="answer(71, 100)">A: De doorlooptijd wordt structureel gemonitord en voldoet aan gestelde normen.</button>
+              <button class="option-btn" onclick="answer(71, 75)">B: Doorlooptijd wordt deels bijgehouden en geëvalueerd.</button>
+              <button class="option-btn" onclick="answer(71, 50)">C: Er is beperkt inzicht in doorlooptijden.</button>
+              <button class="option-btn" onclick="answer(71, 25)">D: Doorlooptijd wordt alleen bij urgente meldingen geregistreerd.</button>
+              <button class="option-btn" onclick="answer(71, 0)">E: Er is geen inzicht in doorlooptijd van meldingen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q72">
+              <strong>Vraag 73:</strong> Wordt gewerkt met terugkoppeling naar de melder?
+            </div>
+            <div id="a72" class="hidden">
+              <button class="option-btn" onclick="answer(72, 100)">A: Melder ontvangt automatisch terugkoppeling over afhandeling en status via het systeem.</button>
+              <button class="option-btn" onclick="answer(72, 75)">B: In de meeste gevallen wordt terugkoppeling gegeven via e-mail of telefoon.</button>
+              <button class="option-btn" onclick="answer(72, 50)">C: Terugkoppeling gebeurt incidenteel of alleen bij vertragingen.</button>
+              <button class="option-btn" onclick="answer(72, 25)">D: Er is geen standaardproces voor terugkoppeling.</button>
+              <button class="option-btn" onclick="answer(72, 0)">E: Er wordt geen terugkoppeling gegeven aan melders.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q73">
+              <strong>Vraag 74:</strong> Zijn er vaste leveranciers voor standaard onderhoudswerkzaamheden?
+            </div>
+            <div id="a73" class="hidden">
+              <button class="option-btn" onclick="answer(73, 100)">A: Er zijn raamcontracten of vaste partners voor alle standaard werkzaamheden.</button>
+              <button class="option-btn" onclick="answer(73, 75)">B: Voor de meeste werkzaamheden zijn vaste leveranciers beschikbaar.</button>
+              <button class="option-btn" onclick="answer(73, 50)">C: Slechts enkele disciplines kennen vaste leveranciers.</button>
+              <button class="option-btn" onclick="answer(73, 25)">D: Leveranciers worden per opdracht geselecteerd zonder vaste afspraken.</button>
+              <button class="option-btn" onclick="answer(73, 0)">E: Er zijn geen vaste leveranciers voor onderhoudswerkzaamheden.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q74">
+              <strong>Vraag 75:</strong> Wordt gewerkt met planningen of werkordersystemen?
+            </div>
+            <div id="a74" class="hidden">
+              <button class="option-btn" onclick="answer(74, 100)">A: Alle werkzaamheden worden gepland en gemonitord via een werkordersysteem.</button>
+              <button class="option-btn" onclick="answer(74, 75)">B: Er is een planningstool in gebruik voor periodiek en preventief onderhoud.</button>
+              <button class="option-btn" onclick="answer(74, 50)">C: Werkorders worden handmatig of via Excel bijgehouden.</button>
+              <button class="option-btn" onclick="answer(74, 25)">D: Plannen gebeurt mondeling of via e-mailafspraken.</button>
+              <button class="option-btn" onclick="answer(74, 0)">E: Er is geen werkorder- of planningssysteem beschikbaar.</button>
+            </div>
+            
+</div>
+<div class="vraagblok"><div class="vraagblok-header">Interne samenwerking en afstemming</div>
+<div class="subkop">Strategisch</div>
+
+            <div class="chat-message bot hidden" id="q75">
+              <strong>Vraag 76:</strong> Hoe is de afstemming georganiseerd tussen vastgoedbeheer, zorg en facilitair beleid?
+            </div>
+            <div id="a75" class="hidden">
+              <button class="option-btn" onclick="answer(75, 100)">A: Er is een structureel afgestemd overleg met vastgelegde rollen en gezamenlijke besluitvorming.</button>
+              <button class="option-btn" onclick="answer(75, 75)">B: Er zijn vaste overlegmomenten, maar met wisselende betrokkenheid.</button>
+              <button class="option-btn" onclick="answer(75, 50)">C: Afstemming gebeurt op initiatief van projecten of bij knelpunten.</button>
+              <button class="option-btn" onclick="answer(75, 25)">D: Overleg is incidenteel en zonder vaste afspraken.</button>
+              <button class="option-btn" onclick="answer(75, 0)">E: Er is geen structurele afstemming tussen de genoemde domeinen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q76">
+              <strong>Vraag 77:</strong> Is er een structurele samenwerking met Inkoop, ICT en Duurzaamheid?
+            </div>
+            <div id="a76" class="hidden">
+              <button class="option-btn" onclick="answer(76, 100)">A: Deze afdelingen zijn integraal betrokken in vastgoedprojecten en beleid.</button>
+              <button class="option-btn" onclick="answer(76, 75)">B: Er is regelmatig overleg bij grotere trajecten.</button>
+              <button class="option-btn" onclick="answer(76, 50)">C: Samenwerking vindt plaats op projectbasis of ad hoc.</button>
+              <button class="option-btn" onclick="answer(76, 25)">D: Afstemming is beperkt en afhankelijk van individuele contacten.</button>
+              <button class="option-btn" onclick="answer(76, 0)">E: Er is geen structurele samenwerking met deze afdelingen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q77">
+              <strong>Vraag 78:</strong> Hoe wordt beleid afgestemd op strategische samenwerkingsdoelen?
+            </div>
+            <div id="a77" class="hidden">
+              <button class="option-btn" onclick="answer(77, 100)">A: Beleid wordt gezamenlijk ontwikkeld en afgestemd op organisatiebrede doelen.</button>
+              <button class="option-btn" onclick="answer(77, 75)">B: Afstemming vindt plaats bij beleidswijzigingen of nieuwe plannen.</button>
+              <button class="option-btn" onclick="answer(77, 50)">C: Er is enige aansluiting, maar zonder formele terugkoppeling.</button>
+              <button class="option-btn" onclick="answer(77, 25)">D: Beleid wordt ontwikkeld binnen de eigen afdeling, met beperkte afstemming.</button>
+              <button class="option-btn" onclick="answer(77, 0)">E: Er is geen afstemming van vastgoedbeleid op samenwerkingsdoelen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q78">
+              <strong>Vraag 79:</strong> Is er integraal overleg over vastgoedontwikkelingen met het bestuur?
+            </div>
+            <div id="a78" class="hidden">
+              <button class="option-btn" onclick="answer(78, 100)">A: Er is periodiek strategisch overleg waarin vastgoedontwikkeling een vast onderdeel is.</button>
+              <button class="option-btn" onclick="answer(78, 75)">B: Het bestuur wordt actief geïnformeerd bij belangrijke besluiten.</button>
+              <button class="option-btn" onclick="answer(78, 50)">C: Afstemming met het bestuur is incidenteel of op projectbasis.</button>
+              <button class="option-btn" onclick="answer(78, 25)">D: Het bestuur is alleen betrokken bij grote investeringsbesluiten.</button>
+              <button class="option-btn" onclick="answer(78, 0)">E: Er is geen integraal overleg over vastgoed met het bestuur.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q79">
+              <strong>Vraag 80:</strong> Wat zijn de risico’s van onvoldoende interne samenwerking binnen vastgoedbeheer?
+            </div>
+            <div id="a79" class="hidden">
+              <button class="option-btn" onclick="answer(79, 100)">A: Risico’s zijn benoemd, geëvalueerd en meegenomen in beleid en sturing.</button>
+              <button class="option-btn" onclick="answer(79, 75)">B: De belangrijkste risico’s zijn in beeld, maar nog niet geborgd.</button>
+              <button class="option-btn" onclick="answer(79, 50)">C: Er is beperkt inzicht in samenwerkingsrisico’s.</button>
+              <button class="option-btn" onclick="answer(79, 25)">D: Risico’s worden niet actief benoemd of geëvalueerd.</button>
+              <button class="option-btn" onclick="answer(79, 0)">E: Er is geen aandacht voor risico’s van interne samenwerking.</button>
+            </div>
+            
+<div class="subkop">Tactisch</div>
+
+            <div class="chat-message bot hidden" id="q80">
+              <strong>Vraag 81:</strong> Zijn overlegmomenten vastgelegd tussen B&O en andere domeinen?
+            </div>
+            <div id="a80" class="hidden">
+              <button class="option-btn" onclick="answer(80, 100)">A: Er zijn vaste overlegstructuren met agenda’s, actielijsten en terugkoppeling.</button>
+              <button class="option-btn" onclick="answer(80, 75)">B: Er is periodiek overleg met verslaglegging, zonder formele structuur.</button>
+              <button class="option-btn" onclick="answer(80, 50)">C: Overlegmomenten vinden plaats op initiatief van medewerkers.</button>
+              <button class="option-btn" onclick="answer(80, 25)">D: Overleg is informeel en wisselend per project of situatie.</button>
+              <button class="option-btn" onclick="answer(80, 0)">E: Er zijn geen overlegmomenten vastgelegd tussen B&O en andere domeinen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q81">
+              <strong>Vraag 82:</strong> Welke afdelingen hebben structurele betrokkenheid bij vastgoedprojecten?
+            </div>
+            <div id="a81" class="hidden">
+              <button class="option-btn" onclick="answer(81, 100)">A: Alle relevante afdelingen (zorg, facilitair, ICT, inkoop) zijn standaard betrokken.</button>
+              <button class="option-btn" onclick="answer(81, 75)">B: De meeste afdelingen worden betrokken afhankelijk van het projecttype.</button>
+              <button class="option-btn" onclick="answer(81, 50)">C: Enkele afdelingen worden incidenteel geraadpleegd.</button>
+              <button class="option-btn" onclick="answer(81, 25)">D: Projecten worden opgezet met minimale afstemming buiten B&O.</button>
+              <button class="option-btn" onclick="answer(81, 0)">E: Er is geen structurele betrokkenheid van andere afdelingen bij vastgoedprojecten.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q82">
+              <strong>Vraag 83:</strong> Hoe worden verantwoordelijkheden verdeeld bij projecten of verbouwingen?
+            </div>
+            <div id="a82" class="hidden">
+              <button class="option-btn" onclick="answer(82, 100)">A: Taken, bevoegdheden en rollen zijn vastgelegd in projectstructuren.</button>
+              <button class="option-btn" onclick="answer(82, 75)">B: Er zijn duidelijke afspraken binnen het team, maar niet altijd formeel vastgelegd.</button>
+              <button class="option-btn" onclick="answer(82, 50)">C: Verdeling gebeurt per project en is niet altijd eenduidig.</button>
+              <button class="option-btn" onclick="answer(82, 25)">D: Er is regelmatig onduidelijkheid over wie waarvoor verantwoordelijk is.</button>
+              <button class="option-btn" onclick="answer(82, 0)">E: Er is geen verdeling van verantwoordelijkheden.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q83">
+              <strong>Vraag 84:</strong> Worden lokale initiatieven (bijv. airco’s, aanpassingen) afgestemd met B&O?
+            </div>
+            <div id="a83" class="hidden">
+              <button class="option-btn" onclick="answer(83, 100)">A: Alle initiatieven worden vooraf afgestemd en getoetst door B&O.</button>
+              <button class="option-btn" onclick="answer(83, 75)">B: Afstemming gebeurt meestal, afhankelijk van het initiatief.</button>
+              <button class="option-btn" onclick="answer(83, 50)">C: Er is onduidelijkheid over wie moet worden geïnformeerd.</button>
+              <button class="option-btn" onclick="answer(83, 25)">D: Initiatieven worden vaak achteraf gemeld of ontdekt.</button>
+              <button class="option-btn" onclick="answer(83, 0)">E: Er is geen structuur of verplichting tot afstemming van initiatieven.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q84">
+              <strong>Vraag 85:</strong> Hoe is samenwerking met de zorgteams vormgegeven m.b.t. interieuronderhoud?
+            </div>
+            <div id="a84" class="hidden">
+              <button class="option-btn" onclick="answer(84, 100)">A: Er is regelmatig overleg en gezamenlijke planning met zorgteams.</button>
+              <button class="option-btn" onclick="answer(84, 75)">B: Samenwerking vindt plaats via aanspreekpunten of coördinatoren.</button>
+              <button class="option-btn" onclick="answer(84, 50)">C: Zorgteams worden geïnformeerd, maar hebben weinig invloed.</button>
+              <button class="option-btn" onclick="answer(84, 25)">D: Samenwerking is minimaal en alleen bij knelpunten zichtbaar.</button>
+              <button class="option-btn" onclick="answer(84, 0)">E: Er is geen samenwerking of afstemming met zorgteams.</button>
+            </div>
+            
+<div class="subkop">Operationeel</div>
+
+            <div class="chat-message bot hidden" id="q85">
+              <strong>Vraag 86:</strong> Zijn er formats of sjablonen voor afstemming tussen zorg en B&O?
+            </div>
+            <div id="a85" class="hidden">
+              <button class="option-btn" onclick="answer(85, 100)">A: Ja, er zijn gestandaardiseerde formats voor verzoeken, afstemming en rapportage.</button>
+              <button class="option-btn" onclick="answer(85, 75)">B: Er zijn sjablonen beschikbaar, maar gebruik is niet verplicht.</button>
+              <button class="option-btn" onclick="answer(85, 50)">C: Enkele afdelingen gebruiken eigen formats, zonder uniformiteit.</button>
+              <button class="option-btn" onclick="answer(85, 25)">D: Afstemming gebeurt vooral mondeling of per e-mail zonder vast stramien.</button>
+              <button class="option-btn" onclick="answer(85, 0)">E: Er zijn geen formats of sjablonen voor afstemming beschikbaar.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q86">
+              <strong>Vraag 87:</strong> Wie is aanspreekpunt per locatie voor coördinatie van onderhoud?
+            </div>
+            <div id="a86" class="hidden">
+              <button class="option-btn" onclick="answer(86, 100)">A: Elke locatie heeft een vast aanspreekpunt bekend bij alle betrokkenen.</button>
+              <button class="option-btn" onclick="answer(86, 75)">B: De meeste locaties hebben een contactpersoon voor onderhoudsafstemming.</button>
+              <button class="option-btn" onclick="answer(86, 50)">C: Er is ad hoc afstemming via wisselende contactpersonen.</button>
+              <button class="option-btn" onclick="answer(86, 25)">D: Aanspreekpunten zijn onduidelijk of niet gecommuniceerd.</button>
+              <button class="option-btn" onclick="answer(86, 0)">E: Er zijn geen aanspreekpunten per locatie vastgesteld.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q87">
+              <strong>Vraag 88:</strong> Worden interne verzoeken geregistreerd en gescoord op prioriteit?
+            </div>
+            <div id="a87" class="hidden">
+              <button class="option-btn" onclick="answer(87, 100)">A: Verzoeken worden digitaal geregistreerd, geprioriteerd en gemonitord.</button>
+              <button class="option-btn" onclick="answer(87, 75)">B: De meeste verzoeken worden geregistreerd en voorzien van een prioriteit.</button>
+              <button class="option-btn" onclick="answer(87, 50)">C: Er is registratie, maar zonder structurele prioritering.</button>
+              <button class="option-btn" onclick="answer(87, 25)">D: Verzoeken worden handmatig bijgehouden met beperkte opvolging.</button>
+              <button class="option-btn" onclick="answer(87, 0)">E: Er is geen registratie of prioritering van interne verzoeken.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q88">
+              <strong>Vraag 89:</strong> Hoe worden wijzigingen in gebruik van ruimtes doorgegeven aan B&O?
+            </div>
+            <div id="a88" class="hidden">
+              <button class="option-btn" onclick="answer(88, 100)">A: Wijzigingen worden gemeld via een vast proces en bijgewerkt in de systemen.</button>
+              <button class="option-btn" onclick="answer(88, 75)">B: Wijzigingen worden via e-mail of formulier doorgegeven en bijgehouden.</button>
+              <button class="option-btn" onclick="answer(88, 50)">C: Doorgeven gebeurt incidenteel zonder directe registratie.</button>
+              <button class="option-btn" onclick="answer(88, 25)">D: Wijzigingen worden vaak achteraf bekend bij B&O.</button>
+              <button class="option-btn" onclick="answer(88, 0)">E: Er is geen structuur voor het doorgeven van gebruikswijzigingen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q89">
+              <strong>Vraag 90:</strong> Hoe verloopt communicatie over geplande onderhoudswerkzaamheden?
+            </div>
+            <div id="a89" class="hidden">
+              <button class="option-btn" onclick="answer(89, 100)">A: Via een planningstool of portaal met meldingen naar betrokken teams.</button>
+              <button class="option-btn" onclick="answer(89, 75)">B: Onderhoud wordt vooraf aangekondigd via e-mail of overleg.</button>
+              <button class="option-btn" onclick="answer(89, 50)">C: Communicatie gebeurt hoofdzakelijk bij overlast of verstoring.</button>
+              <button class="option-btn" onclick="answer(89, 25)">D: Er is weinig tot geen aankondiging vooraf van werkzaamheden.</button>
+              <button class="option-btn" onclick="answer(89, 0)">E: Er is geen communicatie over gepland onderhoud.</button>
+            </div>
+            
+</div>
+<div class="vraagblok"><div class="vraagblok-header">Vastgoeddata en informatiebeheer</div>
+<div class="subkop">Strategisch</div>
+
+            <div class="chat-message bot hidden" id="q90">
+              <strong>Vraag 91:</strong> Wat is de datastrategie binnen vastgoedbeheer (beheer, eigendom, koppeling)?
+            </div>
+            <div id="a90" class="hidden">
+              <button class="option-btn" onclick="answer(90, 100)">A: Er is een geïntegreerde datastrategie voor beheer, eigendom en systeemkoppelingen.</button>
+              <button class="option-btn" onclick="answer(90, 75)">B: Er is een datastrategie opgesteld, maar nog niet volledig geïmplementeerd.</button>
+              <button class="option-btn" onclick="answer(90, 50)">C: Er zijn uitgangspunten voor datagebruik, maar geen formeel beleid.</button>
+              <button class="option-btn" onclick="answer(90, 25)">D: Databeleid is versnipperd en beperkt tot losse toepassingen.</button>
+              <button class="option-btn" onclick="answer(90, 0)">E: Er is geen datastrategie binnen vastgoedbeheer.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q91">
+              <strong>Vraag 92:</strong> Hoe wordt datakwaliteit geborgd in vastgoedbeheer?
+            </div>
+            <div id="a91" class="hidden">
+              <button class="option-btn" onclick="answer(91, 100)">A: Via vaste validaties, rollen en controles op volledigheid, actualiteit en consistentie.</button>
+              <button class="option-btn" onclick="answer(91, 75)">B: Er is periodieke controle van data door verantwoordelijken.</button>
+              <button class="option-btn" onclick="answer(91, 50)">C: Datakwaliteit wordt incidenteel gecontroleerd bij fouten of mutaties.</button>
+              <button class="option-btn" onclick="answer(91, 25)">D: Er is geen structurele borging, alleen handmatige correcties.</button>
+              <button class="option-btn" onclick="answer(91, 0)">E: Er zijn geen processen of rollen voor datakwaliteit.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q92">
+              <strong>Vraag 93:</strong> Wordt gestuurd op integratie van vastgoeddata met andere bedrijfsprocessen?
+            </div>
+            <div id="a92" class="hidden">
+              <button class="option-btn" onclick="answer(92, 100)">A: Ja, data is gekoppeld met financiën, facilitair, onderhoud en projecten.</button>
+              <button class="option-btn" onclick="answer(92, 75)">B: Er zijn koppelingen met enkele kernsystemen.</button>
+              <button class="option-btn" onclick="answer(92, 50)">C: Integratie is beperkt en vooral handmatig of via Excel.</button>
+              <button class="option-btn" onclick="answer(92, 25)">D: Er is nauwelijks integratie, systemen functioneren los van elkaar.</button>
+              <button class="option-btn" onclick="answer(92, 0)">E: Er is geen integratie met andere bedrijfsprocessen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q93">
+              <strong>Vraag 94:</strong> Hoe wordt gestuurd op één versie van de waarheid in databeheer?
+            </div>
+            <div id="a93" class="hidden">
+              <button class="option-btn" onclick="answer(93, 100)">A: Data is centraal vastgelegd, eenduidig gedefinieerd en voor iedereen toegankelijk.</button>
+              <button class="option-btn" onclick="answer(93, 75)">B: Er zijn centrale bronnen, maar inconsistenties komen voor.</button>
+              <button class="option-btn" onclick="answer(93, 50)">C: Data wordt gedeeld via meerdere versies of bestanden.</button>
+              <button class="option-btn" onclick="answer(93, 25)">D: Informatie is versnipperd en afhankelijk van afdelingsbeheer.</button>
+              <button class="option-btn" onclick="answer(93, 0)">E: Er is geen sturing op uniforme en centrale data.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q94">
+              <strong>Vraag 95:</strong> Welke rol speelt digitalisering in de toekomst van vastgoeddata?
+            </div>
+            <div id="a94" class="hidden">
+              <button class="option-btn" onclick="answer(94, 100)">A: Digitalisering is leidend en opgenomen in strategie, met inzet van BI-tools en automatisering.</button>
+              <button class="option-btn" onclick="answer(94, 75)">B: Digitalisering wordt actief gestimuleerd, maar is deels afhankelijk van projecten.</button>
+              <button class="option-btn" onclick="answer(94, 50)">C: Er is beperkte inzet van digitale middelen, zonder visie op de toekomst.</button>
+              <button class="option-btn" onclick="answer(94, 25)">D: Digitalisering wordt incidenteel toegepast.</button>
+              <button class="option-btn" onclick="answer(94, 0)">E: Er is geen beleid of aandacht voor digitalisering van vastgoeddata.</button>
+            </div>
+            
+<div class="subkop">Tactisch</div>
+
+            <div class="chat-message bot hidden" id="q95">
+              <strong>Vraag 96:</strong> Wie is eigenaar van de vastgoeddata en verantwoordelijk voor de actualisatie?
+            </div>
+            <div id="a95" class="hidden">
+              <button class="option-btn" onclick="answer(95, 100)">A: Er is een formele dataverantwoordelijke met mandaat en duidelijke rolbeschrijving.</button>
+              <button class="option-btn" onclick="answer(95, 75)">B: Er zijn afspraken gemaakt over data-eigenaarschap binnen het team.</button>
+              <button class="option-btn" onclick="answer(95, 50)">C: Data-eigenaarschap is informeel belegd bij bepaalde medewerkers.</button>
+              <button class="option-btn" onclick="answer(95, 25)">D: Er is geen formele eigenaar, verantwoordelijkheid verschilt per situatie.</button>
+              <button class="option-btn" onclick="answer(95, 0)">E: Er is geen eigenaar of verantwoordelijke voor vastgoeddata.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q96">
+              <strong>Vraag 97:</strong> Is er een vast format voor objectinformatie (huur, eigendom, m2, functies)?
+            </div>
+            <div id="a96" class="hidden">
+              <button class="option-btn" onclick="answer(96, 100)">A: Er is een vast format voor alle objecten, gestandaardiseerd en centraal beschikbaar.</button>
+              <button class="option-btn" onclick="answer(96, 75)">B: Een format is aanwezig en wordt deels gebruikt binnen projecten of rapportages.</button>
+              <button class="option-btn" onclick="answer(96, 50)">C: Er zijn sjablonen, maar geen verplicht gebruik of consistentie.</button>
+              <button class="option-btn" onclick="answer(96, 25)">D: Objectinformatie is beschikbaar in diverse vormen zonder uniformiteit.</button>
+              <button class="option-btn" onclick="answer(96, 0)">E: Er is geen vast format of centrale registratie voor objectinformatie.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q97">
+              <strong>Vraag 98:</strong> Wordt gebruik gemaakt van een vast datasysteem (bijv. FMIS)?
+            </div>
+            <div id="a97" class="hidden">
+              <button class="option-btn" onclick="answer(97, 100)">A: Er wordt gewerkt met een geïntegreerd FMIS met volledige objectregistratie.</button>
+              <button class="option-btn" onclick="answer(97, 75)">B: Een FMIS wordt gebruikt voor delen van het vastgoedbeheer.</button>
+              <button class="option-btn" onclick="answer(97, 50)">C: Er is een beperkt systeem of Excel-structuur beschikbaar.</button>
+              <button class="option-btn" onclick="answer(97, 25)">D: Informatie wordt verspreid opgeslagen in losse documenten of tools.</button>
+              <button class="option-btn" onclick="answer(97, 0)">E: Er wordt geen gebruik gemaakt van een vast datasysteem.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q98">
+              <strong>Vraag 99:</strong> Zijn prestatiegegevens van gebouwen onderdeel van de dataregistratie?
+            </div>
+            <div id="a98" class="hidden">
+              <button class="option-btn" onclick="answer(98, 100)">A: Prestatiegegevens (energie, onderhoud, gebruik) zijn structureel onderdeel van de registratie.</button>
+              <button class="option-btn" onclick="answer(98, 75)">B: Prestatiegegevens worden periodiek toegevoegd voor kernobjecten.</button>
+              <button class="option-btn" onclick="answer(98, 50)">C: Er worden incidenteel prestaties gemeten zonder structurele opslag.</button>
+              <button class="option-btn" onclick="answer(98, 25)">D: Enkele prestatiegegevens zijn aanwezig, zonder integratie in data.</button>
+              <button class="option-btn" onclick="answer(98, 0)">E: Prestatiegegevens worden niet geregistreerd.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q99">
+              <strong>Vraag 100:</strong> Wordt vastgoeddata gebruikt in managementrapportages?
+            </div>
+            <div id="a99" class="hidden">
+              <button class="option-btn" onclick="answer(99, 100)">A: Vastgoeddata vormt structureel input voor management- en bestuursrapportages.</button>
+              <button class="option-btn" onclick="answer(99, 75)">B: Data wordt regelmatig verwerkt in beleids- en kwartaalrapportages.</button>
+              <button class="option-btn" onclick="answer(99, 50)">C: Data wordt incidenteel gebruikt in presentaties of notities.</button>
+              <button class="option-btn" onclick="answer(99, 25)">D: Gebruik van data gebeurt op verzoek en zonder vaste structuur.</button>
+              <button class="option-btn" onclick="answer(99, 0)">E: Vastgoeddata wordt niet gebruikt voor rapportages.</button>
+            </div>
+            
+<div class="subkop">Operationeel</div>
+
+            <div class="chat-message bot hidden" id="q100">
+              <strong>Vraag 101:</strong> Is er een actuele vastgoedlijst met eigendom, huur, metrages, functies?
+            </div>
+            <div id="a100" class="hidden">
+              <button class="option-btn" onclick="answer(100, 100)">A: De vastgoedlijst is volledig, actueel en centraal beschikbaar voor betrokkenen.</button>
+              <button class="option-btn" onclick="answer(100, 75)">B: De lijst is grotendeels actueel, maar mist enkele gegevens of objecten.</button>
+              <button class="option-btn" onclick="answer(100, 50)">C: Er is een lijst, maar deze is onvolledig en niet regelmatig geüpdatet.</button>
+              <button class="option-btn" onclick="answer(100, 25)">D: Overzicht is versnipperd over meerdere documenten of systemen.</button>
+              <button class="option-btn" onclick="answer(100, 0)">E: Er is geen centrale of actuele vastgoedlijst beschikbaar.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q101">
+              <strong>Vraag 102:</strong> Waar worden tekeningen, PvE's en vergunningen opgeslagen?
+            </div>
+            <div id="a101" class="hidden">
+              <button class="option-btn" onclick="answer(101, 100)">A: Documentatie is digitaal centraal opgeslagen in een toegankelijke structuur.</button>
+              <button class="option-btn" onclick="answer(101, 75)">B: De meeste documenten zijn digitaal beschikbaar, deels decentraal opgeslagen.</button>
+              <button class="option-btn" onclick="answer(101, 50)">C: Er is een mix van digitale en papieren opslag zonder centrale structuur.</button>
+              <button class="option-btn" onclick="answer(101, 25)">D: Documenten worden bewaard op projectniveau zonder centrale borging.</button>
+              <button class="option-btn" onclick="answer(101, 0)">E: Er is geen vaste opslaglocatie of structuur voor deze documenten.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q102">
+              <strong>Vraag 103:</strong> Hoe wordt registratie van inspecties, keuringen en certificaten geborgd?
+            </div>
+            <div id="a102" class="hidden">
+              <button class="option-btn" onclick="answer(102, 100)">A: Registratie gebeurt centraal, digitaal en met signalering voor vervaldata.</button>
+              <button class="option-btn" onclick="answer(102, 75)">B: De meeste keuringen worden bijgehouden in systemen of overzichten.</button>
+              <button class="option-btn" onclick="answer(102, 50)">C: Inspecties worden handmatig geregistreerd zonder automatische opvolging.</button>
+              <button class="option-btn" onclick="answer(102, 25)">D: Registratie gebeurt informeel en niet structureel vastgelegd.</button>
+              <button class="option-btn" onclick="answer(102, 0)">E: Er is geen zicht of borging van keuringen of certificaten.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q103">
+              <strong>Vraag 104:</strong> Worden wijzigingen in vastgoed direct verwerkt in de systemen?
+            </div>
+            <div id="a103" class="hidden">
+              <button class="option-btn" onclick="answer(103, 100)">A: Wijzigingen worden realtime bijgehouden en gevalideerd in het systeem.</button>
+              <button class="option-btn" onclick="answer(103, 75)">B: Mutaties worden periodiek doorgevoerd op basis van interne meldingen.</button>
+              <button class="option-btn" onclick="answer(103, 50)">C: Wijzigingen worden incidenteel bijgewerkt met vertraging.</button>
+              <button class="option-btn" onclick="answer(103, 25)">D: Aanpassingen gebeuren handmatig en niet structureel.</button>
+              <button class="option-btn" onclick="answer(103, 0)">E: Wijzigingen worden niet of nauwelijks verwerkt in systemen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q104">
+              <strong>Vraag 105:</strong> Is er een logboek of meldingssysteem per object beschikbaar?
+            </div>
+            <div id="a104" class="hidden">
+              <button class="option-btn" onclick="answer(104, 100)">A: Voor elk object is een digitaal logboek of portaal beschikbaar voor meldingen en historie.</button>
+              <button class="option-btn" onclick="answer(104, 75)">B: De meeste objecten hebben een meldingssysteem met beperkte functionaliteit.</button>
+              <button class="option-btn" onclick="answer(104, 50)">C: Er is een centraal meldpunt, maar geen objectgerichte logging.</button>
+              <button class="option-btn" onclick="answer(104, 25)">D: Meldingen worden mondeling of via e-mail verwerkt zonder registratie per object.</button>
+              <button class="option-btn" onclick="answer(104, 0)">E: Er is geen logboek of meldingssysteem beschikbaar.</button>
+            </div>
+            
+</div>
+<div class="vraagblok"><div class="vraagblok-header">Verduurzaming & compliance</div>
+<div class="subkop">Strategisch</div>
+
+            <div class="chat-message bot hidden" id="q105">
+              <strong>Vraag 106:</strong> Is er een lange termijn duurzaamheidsplan voor het vastgoed?
+            </div>
+            <div id="a105" class="hidden">
+              <button class="option-btn" onclick="answer(105, 100)">A: Ja, het plan is vastgesteld, afgestemd op beleid en volledig geïntegreerd in investeringsbesluiten.</button>
+              <button class="option-btn" onclick="answer(105, 75)">B: Er is een plan opgesteld en deels geïmplementeerd.</button>
+              <button class="option-btn" onclick="answer(105, 50)">C: Er is een ontwerp of conceptplan zonder formele vaststelling.</button>
+              <button class="option-btn" onclick="answer(105, 25)">D: Er zijn losse beleidsvoornemens zonder samenhangend plan.</button>
+              <button class="option-btn" onclick="answer(105, 0)">E: Er is geen duurzaamheidsplan voor vastgoed beschikbaar.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q106">
+              <strong>Vraag 107:</strong> Hoe zijn landelijke duurzaamheidsdoelen vertaald naar Saxenburgh?
+            </div>
+            <div id="a106" class="hidden">
+              <button class="option-btn" onclick="answer(106, 100)">A: Landelijke doelen zijn vertaald in concrete doelen, projecten en KPI's.</button>
+              <button class="option-btn" onclick="answer(106, 75)">B: Doelen zijn vertaald in beleid, maar nog beperkt geborgd in uitvoering.</button>
+              <button class="option-btn" onclick="answer(106, 50)">C: Doelen worden deels meegenomen bij investeringsafwegingen.</button>
+              <button class="option-btn" onclick="answer(106, 25)">D: Doelen zijn bekend, maar worden niet toegepast in beleid of projecten.</button>
+              <button class="option-btn" onclick="answer(106, 0)">E: Er is geen vertaling of toepassing van landelijke duurzaamheidsdoelen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q107">
+              <strong>Vraag 108:</strong> Hoe wordt CO2-reductie geborgd in MJOP en investeringen?
+            </div>
+            <div id="a107" class="hidden">
+              <button class="option-btn" onclick="answer(107, 100)">A: CO2-reductie is integraal onderdeel van MJOP-keuzes en investeringsafwegingen.</button>
+              <button class="option-btn" onclick="answer(107, 75)">B: Er wordt gestuurd op CO2-reductie bij specifieke maatregelen.</button>
+              <button class="option-btn" onclick="answer(107, 50)">C: Er is beperkte koppeling tussen CO2-doelen en het MJOP.</button>
+              <button class="option-btn" onclick="answer(107, 25)">D: CO2-reductie wordt ad hoc meegenomen.</button>
+              <button class="option-btn" onclick="answer(107, 0)">E: Er is geen zicht of borging van CO2-reductie in onderhoud of investeringen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q108">
+              <strong>Vraag 109:</strong> Welke rol speelt vastgoedbeheer in de energietransitie binnen de organisatie?
+            </div>
+            <div id="a108" class="hidden">
+              <button class="option-btn" onclick="answer(108, 100)">A: Vastgoedbeheer speelt een sturende en coördinerende rol bij energietransitieprojecten.</button>
+              <button class="option-btn" onclick="answer(108, 75)">B: Vastgoedbeheer is betrokken bij uitvoering, maar niet bij sturing of beleid.</button>
+              <button class="option-btn" onclick="answer(108, 50)">C: Vastgoedbeheer levert input, maar speelt een beperkte rol.</button>
+              <button class="option-btn" onclick="answer(108, 25)">D: Vastgoedbeheer wordt niet structureel betrokken bij energietransitie.</button>
+              <button class="option-btn" onclick="answer(108, 0)">E: Vastgoedbeheer speelt geen rol in de energietransitie.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q109">
+              <strong>Vraag 110:</strong> Worden subsidies strategisch ingezet ter ondersteuning van duurzaamheidsprojecten?
+            </div>
+            <div id="a109" class="hidden">
+              <button class="option-btn" onclick="answer(109, 100)">A: Er is een actief subsidiebeleid gericht op maximale benutting van regelingen.</button>
+              <button class="option-btn" onclick="answer(109, 75)">B: Subsidies worden benut bij grote projecten of via externe ondersteuning.</button>
+              <button class="option-btn" onclick="answer(109, 50)">C: Er wordt incidenteel gebruik gemaakt van subsidies.</button>
+              <button class="option-btn" onclick="answer(109, 25)">D: Subsidies zijn bekend, maar worden nauwelijks aangevraagd.</button>
+              <button class="option-btn" onclick="answer(109, 0)">E: Er is geen aandacht of inzet van subsidies voor verduurzaming.</button>
+            </div>
+            
+<div class="subkop">Tactisch</div>
+
+            <div class="chat-message bot hidden" id="q110">
+              <strong>Vraag 111:</strong> Welke wet- en regelgeving wordt gevolgd op het gebied van duurzaamheid?
+            </div>
+            <div id="a110" class="hidden">
+              <button class="option-btn" onclick="answer(110, 100)">A: Volledig inzicht in en toepassing van alle relevante regelgeving (EED, BENG, etc.).</button>
+              <button class="option-btn" onclick="answer(110, 75)">B: De belangrijkste regels worden toegepast, met periodieke updates.</button>
+              <button class="option-btn" onclick="answer(110, 50)">C: Enkele regels zijn bekend en worden opgevolgd, maar zonder structuur.</button>
+              <button class="option-btn" onclick="answer(110, 25)">D: Regelgeving wordt incidenteel toegepast, afhankelijk van projecten.</button>
+              <button class="option-btn" onclick="answer(110, 0)">E: Er is geen actief beleid op naleving van duurzaamheidsregelgeving.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q111">
+              <strong>Vraag 112:</strong> Wordt gewerkt met energieprestatie-inzichten per gebouw?
+            </div>
+            <div id="a111" class="hidden">
+              <button class="option-btn" onclick="answer(111, 100)">A: Voor alle gebouwen zijn actuele energieprofielen beschikbaar en gebruikt in sturing.</button>
+              <button class="option-btn" onclick="answer(111, 75)">B: De meeste gebouwen hebben een energieprofiel dat wordt benut bij keuzes.</button>
+              <button class="option-btn" onclick="answer(111, 50)">C: Voor sommige gebouwen zijn prestaties bekend, maar beperkt gebruikt.</button>
+              <button class="option-btn" onclick="answer(111, 25)">D: Er is inzicht, maar toepassing is ad hoc en zonder structurele evaluatie.</button>
+              <button class="option-btn" onclick="answer(111, 0)">E: Er wordt niet gewerkt met energieprestatie-inzichten.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q112">
+              <strong>Vraag 113:</strong> Hoe worden EED, Green Deal, DUMAVA en andere regelingen verwerkt?
+            </div>
+            <div id="a112" class="hidden">
+              <button class="option-btn" onclick="answer(112, 100)">A: Regelingen zijn geïnventariseerd, verwerkt in beleid en gekoppeld aan uitvoering.</button>
+              <button class="option-btn" onclick="answer(112, 75)">B: De meeste regelingen zijn bekend en verwerkt in lopende projecten.</button>
+              <button class="option-btn" onclick="answer(112, 50)">C: Regelingen worden deels gevolgd, afhankelijk van externe ondersteuning.</button>
+              <button class="option-btn" onclick="answer(112, 25)">D: Er is incidentele verwerking zonder structurele borging.</button>
+              <button class="option-btn" onclick="answer(112, 0)">E: Er wordt geen gebruik gemaakt van beschikbare regelingen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q113">
+              <strong>Vraag 114:</strong> Worden leveranciers geselecteerd op duurzame criteria?
+            </div>
+            <div id="a113" class="hidden">
+              <button class="option-btn" onclick="answer(113, 100)">A: Duurzame criteria zijn standaardonderdeel van het selectieproces en contracten.</button>
+              <button class="option-btn" onclick="answer(113, 75)">B: Duurzaamheid speelt mee in de selectie, zonder vaste weging.</button>
+              <button class="option-btn" onclick="answer(113, 50)">C: Sommige opdrachten kennen duurzaamheidseisen, niet structureel.</button>
+              <button class="option-btn" onclick="answer(113, 25)">D: Duurzaamheid is optioneel of afhankelijk van de inschrijver.</button>
+              <button class="option-btn" onclick="answer(113, 0)">E: Er worden geen duurzaamheidscriteria gehanteerd bij leverancierskeuze.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q114">
+              <strong>Vraag 115:</strong> Is duurzaamheid een vast onderdeel van het MJOP en jaarplan?
+            </div>
+            <div id="a114" class="hidden">
+              <button class="option-btn" onclick="answer(114, 100)">A: Duurzaamheidsmaatregelen zijn integraal opgenomen en zichtbaar in begroting en planning.</button>
+              <button class="option-btn" onclick="answer(114, 75)">B: Duurzaamheid is opgenomen in delen van MJOP of projecten.</button>
+              <button class="option-btn" onclick="answer(114, 50)">C: Er zijn losse duurzaamheidsmaatregelen zonder integratie in het MJOP.</button>
+              <button class="option-btn" onclick="answer(114, 25)">D: Duurzaamheid wordt beperkt meegenomen in het jaarplan.</button>
+              <button class="option-btn" onclick="answer(114, 0)">E: Er is geen relatie tussen MJOP/jaarplan en duurzaamheid.</button>
+            </div>
+            
+<div class="subkop">Operationeel</div>
+
+            <div class="chat-message bot hidden" id="q115">
+              <strong>Vraag 116:</strong> Welke gebouwen hebben een energielabel en hoe actueel zijn deze?
+            </div>
+            <div id="a115" class="hidden">
+              <button class="option-btn" onclick="answer(115, 100)">A: Alle gebouwen beschikken over een actueel energielabel, centraal vastgelegd.</button>
+              <button class="option-btn" onclick="answer(115, 75)">B: De meeste gebouwen hebben een label, waarvan enkele verouderd.</button>
+              <button class="option-btn" onclick="answer(115, 50)">C: Er zijn labels aanwezig, maar onvolledig of versnipperd vastgelegd.</button>
+              <button class="option-btn" onclick="answer(115, 25)">D: Energielabels zijn beperkt beschikbaar of niet systematisch bijgehouden.</button>
+              <button class="option-btn" onclick="answer(115, 0)">E: Er is geen inzicht in aanwezigheid of status van energielabels.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q116">
+              <strong>Vraag 117:</strong> Hoe worden energiekosten en verbruik per locatie gemonitord?
+            </div>
+            <div id="a116" class="hidden">
+              <button class="option-btn" onclick="answer(116, 100)">A: Monitoring is geautomatiseerd, realtime en gekoppeld aan rapportages.</button>
+              <button class="option-btn" onclick="answer(116, 75)">B: Verbruik wordt per kwartaal of maand inzichtelijk gemaakt via systemen.</button>
+              <button class="option-btn" onclick="answer(116, 50)">C: Energieverbruik wordt periodiek verzameld zonder structurele analyse.</button>
+              <button class="option-btn" onclick="answer(116, 25)">D: Er is beperkt inzicht in kosten en verbruik per locatie.</button>
+              <button class="option-btn" onclick="answer(116, 0)">E: Er wordt geen monitoring uitgevoerd op energieverbruik of kosten.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q117">
+              <strong>Vraag 118:</strong> Worden energierapporten gebruikt in besluitvorming over onderhoud?
+            </div>
+            <div id="a117" class="hidden">
+              <button class="option-btn" onclick="answer(117, 100)">A: Energierapporten vormen structureel input bij onderhoudsplanning en -keuzes.</button>
+              <button class="option-btn" onclick="answer(117, 75)">B: Energierapporten worden geraadpleegd bij grotere projecten of investeringen.</button>
+              <button class="option-btn" onclick="answer(117, 50)">C: Rapporten zijn beschikbaar, maar worden beperkt benut in besluitvorming.</button>
+              <button class="option-btn" onclick="answer(117, 25)">D: Er is slechts incidenteel gebruik van energierapporten.</button>
+              <button class="option-btn" onclick="answer(117, 0)">E: Energierapporten worden niet gebruikt bij onderhoudsbesluiten.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q118">
+              <strong>Vraag 119:</strong> Is er zicht op de status van wettelijke keuringen?
+            </div>
+            <div id="a118" class="hidden">
+              <button class="option-btn" onclick="answer(118, 100)">A: Alle keuringen zijn actueel, geregistreerd en gemonitord via centraal systeem.</button>
+              <button class="option-btn" onclick="answer(118, 75)">B: De meeste keuringen zijn op orde, met periodieke controle.</button>
+              <button class="option-btn" onclick="answer(118, 50)">C: Er is overzicht van keuringen, maar actualiteit is onduidelijk.</button>
+              <button class="option-btn" onclick="answer(118, 25)">D: Keuringen worden handmatig bijgehouden en zijn niet altijd up-to-date.</button>
+              <button class="option-btn" onclick="answer(118, 0)">E: Er is geen inzicht in de status van wettelijke keuringen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q119">
+              <strong>Vraag 120:</strong> Wordt gebruik gemaakt van een centraal platform voor milieudata?
+            </div>
+            <div id="a119" class="hidden">
+              <button class="option-btn" onclick="answer(119, 100)">A: Alle milieugegevens worden beheerd in één platform met analyses en rapportages.</button>
+              <button class="option-btn" onclick="answer(119, 75)">B: Milieudata is deels gecentraliseerd en toegankelijk voor betrokkenen.</button>
+              <button class="option-btn" onclick="answer(119, 50)">C: Data wordt opgeslagen, maar niet centraal of uniform ontsloten.</button>
+              <button class="option-btn" onclick="answer(119, 25)">D: Informatie is versnipperd over systemen of afdelingen.</button>
+              <button class="option-btn" onclick="answer(119, 0)">E: Er is geen centraal platform of structuur voor milieudata.</button>
+            </div>
+            
+</div>
+<div class="vraagblok"><div class="vraagblok-header">Contract- en leveranciersmanagement</div>
+<div class="subkop">Strategisch</div>
+
+            <div class="chat-message bot hidden" id="q120">
+              <strong>Vraag 121:</strong> Is er een langetermijnvisie op samenwerking met onderhoudspartners?
+            </div>
+            <div id="a120" class="hidden">
+              <button class="option-btn" onclick="answer(120, 100)">A: Er is een uitgewerkte visie geïntegreerd in strategisch beleid en besluitvorming.</button>
+              <button class="option-btn" onclick="answer(120, 75)">B: Er is een visie ontwikkeld, maar toepassing in beleid is beperkt.</button>
+              <button class="option-btn" onclick="answer(120, 50)">C: Er is een intentie tot samenwerking, zonder duidelijke langetermijnvisie.</button>
+              <button class="option-btn" onclick="answer(120, 25)">D: Samenwerking wordt projectmatig ingevuld, zonder visie of continuïteit.</button>
+              <button class="option-btn" onclick="answer(120, 0)">E: Er is geen visie of beleid op samenwerking met onderhoudspartners.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q121">
+              <strong>Vraag 122:</strong> Worden regiepartners betrokken bij beleidsvorming en afstemming?
+            </div>
+            <div id="a121" class="hidden">
+              <button class="option-btn" onclick="answer(121, 100)">A: Regiepartners zijn actief betrokken bij beleid en strategische keuzes.</button>
+              <button class="option-btn" onclick="answer(121, 75)">B: Er is structureel overleg, maar beleidsinvloed is beperkt.</button>
+              <button class="option-btn" onclick="answer(121, 50)">C: Regiepartners zijn incidenteel betrokken bij afstemming.</button>
+              <button class="option-btn" onclick="answer(121, 25)">D: Beleid wordt opgesteld zonder overleg met regiepartners.</button>
+              <button class="option-btn" onclick="answer(121, 0)">E: Regiepartners worden niet betrokken bij strategische processen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q122">
+              <strong>Vraag 123:</strong> Hoe worden prestatiecontracten strategisch ingezet?
+            </div>
+            <div id="a122" class="hidden">
+              <button class="option-btn" onclick="answer(122, 100)">A: Zij vormen een sturingsinstrument gekoppeld aan KPI’s en beleidsdoelen.</button>
+              <button class="option-btn" onclick="answer(122, 75)">B: Ze worden strategisch ingezet voor enkele grote leveranciers.</button>
+              <button class="option-btn" onclick="answer(122, 50)">C: Prestatiecontracten worden gebruikt, maar vooral operationeel ingezet.</button>
+              <button class="option-btn" onclick="answer(122, 25)">D: Er is weinig strategische sturing op prestaties of contractvormen.</button>
+              <button class="option-btn" onclick="answer(122, 0)">E: Er wordt niet gewerkt met prestatiecontracten.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q123">
+              <strong>Vraag 124:</strong> Is het leverancierslandschap afgestemd op de vastgoedstrategie?
+            </div>
+            <div id="a123" class="hidden">
+              <button class="option-btn" onclick="answer(123, 100)">A: Ja, selectie en inzet zijn direct gekoppeld aan strategische vastgoeddoelen.</button>
+              <button class="option-btn" onclick="answer(123, 75)">B: Er is enige afstemming, vooral bij strategische aanbestedingen.</button>
+              <button class="option-btn" onclick="answer(123, 50)">C: Afstemming is beperkt en vooral financieel of praktisch gestuurd.</button>
+              <button class="option-btn" onclick="answer(123, 25)">D: Selectie gebeurt op basis van beschikbaarheid of bestaande relaties.</button>
+              <button class="option-btn" onclick="answer(123, 0)">E: Er is geen relatie tussen vastgoedstrategie en leverancierskeuze.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q124">
+              <strong>Vraag 125:</strong> Wordt gestuurd op risicospreiding en continuïteit in contracten?
+            </div>
+            <div id="a124" class="hidden">
+              <button class="option-btn" onclick="answer(124, 100)">A: Er is een contractstrategie met duidelijke spreiding, exit-planning en continuïteitsborging.</button>
+              <button class="option-btn" onclick="answer(124, 75)">B: Er wordt gestuurd op risicospreiding, maar zonder formele strategie.</button>
+              <button class="option-btn" onclick="answer(124, 50)">C: Er is beperkte aandacht voor risicobeheersing in leveranciersstructuur.</button>
+              <button class="option-btn" onclick="answer(124, 25)">D: Contracten worden afzonderlijk beheerd zonder langetermijnperspectief.</button>
+              <button class="option-btn" onclick="answer(124, 0)">E: Er is geen aandacht voor risicospreiding of continuïteit in contractbeheer.</button>
+            </div>
+            
+<div class="subkop">Tactisch</div>
+
+            <div class="chat-message bot hidden" id="q125">
+              <strong>Vraag 126:</strong> Worden leveranciers periodiek geëvalueerd op basis van prestaties?
+            </div>
+            <div id="a125" class="hidden">
+              <button class="option-btn" onclick="answer(125, 100)">A: Evaluaties vinden gestructureerd plaats met vastgelegde methodiek en rapportage.</button>
+              <button class="option-btn" onclick="answer(125, 75)">B: Er is periodieke evaluatie, maar zonder vaste cyclus of rapportagevorm.</button>
+              <button class="option-btn" onclick="answer(125, 50)">C: Evaluaties gebeuren incidenteel of naar aanleiding van problemen.</button>
+              <button class="option-btn" onclick="answer(125, 25)">D: Er is weinig structurele evaluatie, vooral afhankelijk van projectverloop.</button>
+              <button class="option-btn" onclick="answer(125, 0)">E: Er worden geen evaluaties uitgevoerd van leveranciersprestaties.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q126">
+              <strong>Vraag 127:</strong> Zijn KPI’s opgenomen in alle prestatiecontracten?
+            </div>
+            <div id="a126" class="hidden">
+              <button class="option-btn" onclick="answer(126, 100)">A: Alle prestatiecontracten bevatten meetbare KPI’s die periodiek worden getoetst.</button>
+              <button class="option-btn" onclick="answer(126, 75)">B: De meeste contracten bevatten KPI’s, maar deze worden niet altijd gemonitord.</button>
+              <button class="option-btn" onclick="answer(126, 50)">C: Er zijn beperkte KPI’s opgenomen, zonder duidelijke meting of opvolging.</button>
+              <button class="option-btn" onclick="answer(126, 25)">D: Slechts enkele contracten bevatten KPI’s, vaak alleen kwalitatief.</button>
+              <button class="option-btn" onclick="answer(126, 0)">E: KPI’s worden niet toegepast in contractafspraken.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q127">
+              <strong>Vraag 128:</strong> Vindt structureel overleg plaats met huisleveranciers?
+            </div>
+            <div id="a127" class="hidden">
+              <button class="option-btn" onclick="answer(127, 100)">A: Er is een vast overlegformat met alle kernleveranciers inclusief opvolging.</button>
+              <button class="option-btn" onclick="answer(127, 75)">B: Er is regelmatig overleg met de meeste vaste leveranciers.</button>
+              <button class="option-btn" onclick="answer(127, 50)">C: Overleg vindt plaats bij specifieke projecten of knelpunten.</button>
+              <button class="option-btn" onclick="answer(127, 25)">D: Er is beperkt overleg en geen gestructureerde afstemming.</button>
+              <button class="option-btn" onclick="answer(127, 0)">E: Er is geen overleg met huisleveranciers.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q128">
+              <strong>Vraag 129:</strong> Wordt gewerkt met raamcontracten of per project?
+            </div>
+            <div id="a128" class="hidden">
+              <button class="option-btn" onclick="answer(128, 100)">A: Er is een duidelijke strategie voor raamcontracten afgestemd op type dienstverlening.</button>
+              <button class="option-btn" onclick="answer(128, 75)">B: De meeste diensten zijn gebundeld in raamcontracten, met enkele losse projecten.</button>
+              <button class="option-btn" onclick="answer(128, 50)">C: Er is geen vaste lijn: keuze voor raam- of projectcontracten is wisselend.</button>
+              <button class="option-btn" onclick="answer(128, 25)">D: De meeste contracten worden per project afgesloten zonder integrale benadering.</button>
+              <button class="option-btn" onclick="answer(128, 0)">E: Er is geen bewust beleid t.a.v. contractvormen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q129">
+              <strong>Vraag 130:</strong> Is contractbeheer gedigitaliseerd (bijv. via een contractbeheersysteem)?
+            </div>
+            <div id="a129" class="hidden">
+              <button class="option-btn" onclick="answer(129, 100)">A: Er is een integraal digitaal systeem met signalering en volledige documentatie.</button>
+              <button class="option-btn" onclick="answer(129, 75)">B: Contractbeheer is deels digitaal met beperkte functionaliteit.</button>
+              <button class="option-btn" onclick="answer(129, 50)">C: Er is een losse digitale opslag zonder structuur of monitoring.</button>
+              <button class="option-btn" onclick="answer(129, 25)">D: Contracten worden handmatig beheerd met Excel of e-mailoverzichten.</button>
+              <button class="option-btn" onclick="answer(129, 0)">E: Er is geen digitaal contractbeheer aanwezig.</button>
+            </div>
+            
+<div class="subkop">Operationeel</div>
+
+            <div class="chat-message bot hidden" id="q130">
+              <strong>Vraag 131:</strong> Is er een actueel overzicht van alle lopende contracten met leveranciers?
+            </div>
+            <div id="a130" class="hidden">
+              <button class="option-btn" onclick="answer(130, 100)">A: Er is een volledig en actueel overzicht digitaal beschikbaar voor betrokkenen.</button>
+              <button class="option-btn" onclick="answer(130, 75)">B: Er is een overzicht aanwezig, maar actualisatie is incidenteel.</button>
+              <button class="option-btn" onclick="answer(130, 50)">C: Er is een deels bijgehouden overzicht, niet centraal toegankelijk.</button>
+              <button class="option-btn" onclick="answer(130, 25)">D: Contractinformatie is versnipperd over meerdere afdelingen.</button>
+              <button class="option-btn" onclick="answer(130, 0)">E: Er is geen actueel overzicht van lopende contracten.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q131">
+              <strong>Vraag 132:</strong> Zijn werkafspraken en contactpersonen duidelijk vastgelegd per leverancier?
+            </div>
+            <div id="a131" class="hidden">
+              <button class="option-btn" onclick="answer(131, 100)">A: Voor alle leveranciers zijn afspraken en aanspreekpunten gedocumenteerd en geborgd.</button>
+              <button class="option-btn" onclick="answer(131, 75)">B: Voor de meeste leveranciers zijn afspraken vastgelegd.</button>
+              <button class="option-btn" onclick="answer(131, 50)">C: Er zijn informele afspraken zonder structurele vastlegging.</button>
+              <button class="option-btn" onclick="answer(131, 25)">D: Enkele afspraken zijn bekend binnen het team, maar niet formeel vastgelegd.</button>
+              <button class="option-btn" onclick="answer(131, 0)">E: Er zijn geen vastgelegde werkafspraken of contactpersonen per leverancier.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q132">
+              <strong>Vraag 133:</strong> Worden werkbonnen gekoppeld aan facturen in het systeem?
+            </div>
+            <div id="a132" class="hidden">
+              <button class="option-btn" onclick="answer(132, 100)">A: Werkbonnen en facturen worden systematisch digitaal gekoppeld en gecontroleerd.</button>
+              <button class="option-btn" onclick="answer(132, 75)">B: Grotendeels worden werkbonnen gekoppeld, met enkele uitzonderingen.</button>
+              <button class="option-btn" onclick="answer(132, 50)">C: Er is een handmatig proces voor controle zonder volledige integratie.</button>
+              <button class="option-btn" onclick="answer(132, 25)">D: Er wordt beperkt gekoppeld; veel handmatige verificatie nodig.</button>
+              <button class="option-btn" onclick="answer(132, 0)">E: Er is geen koppeling tussen werkbonnen en facturen.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q133">
+              <strong>Vraag 134:</strong> Hoe wordt omgegaan met klachten over leveranciersprestaties?
+            </div>
+            <div id="a133" class="hidden">
+              <button class="option-btn" onclick="answer(133, 100)">A: Klachten worden gestructureerd geregistreerd, opgevolgd en geëvalueerd.</button>
+              <button class="option-btn" onclick="answer(133, 75)">B: Klachten worden geregistreerd, maar opvolging is wisselend.</button>
+              <button class="option-btn" onclick="answer(133, 50)">C: Klachten worden incidenteel besproken zonder vast proces.</button>
+              <button class="option-btn" onclick="answer(133, 25)">D: Afhandeling is informeel en afhankelijk van betrokken medewerkers.</button>
+              <button class="option-btn" onclick="answer(133, 0)">E: Er is geen systematiek voor klachtenafhandeling richting leveranciers.</button>
+            </div>
+            
+
+            <div class="chat-message bot hidden" id="q134">
+              <strong>Vraag 135:</strong> Wordt informatie uit serviceportalen van leveranciers actief gebruikt?
+            </div>
+            <div id="a134" class="hidden">
+              <button class="option-btn" onclick="answer(134, 100)">A: Portalen worden actief benut voor monitoring, communicatie en analyse.</button>
+              <button class="option-btn" onclick="answer(134, 75)">B: Er is toegang tot portalen, maar gebruik is beperkt.</button>
+              <button class="option-btn" onclick="answer(134, 50)">C: Portalen worden incidenteel geraadpleegd, zonder integratie in processen.</button>
+              <button class="option-btn" onclick="answer(134, 25)">D: Gebruik van portalen is ad hoc en afhankelijk van leverancier.</button>
+              <button class="option-btn" onclick="answer(134, 0)">E: Er wordt geen gebruik gemaakt van serviceportalen.</button>
+            </div>
+            
+</div>
+    <div class="score-box hidden" id="scoreBox">
+      <div id="scoreText"></div>
+      <div class="final-message">
+        Op basis van je beantwoording is een totaalscore berekend over 135 vragen.<br><br>
+        <strong>Beoordeling:</strong><br>
+        <ul>
+          <li><strong>0% – 30%</strong>: 🟥 Crisisniveau – direct ingrijpen noodzakelijk</li>
+          <li><strong>31% – 50%</strong>: 🟧 Verbetertraject noodzakelijk</li>
+          <li><strong>51% – 75%</strong>: 🟨 Voldoende – ontwikkelkansen zichtbaar</li>
+          <li><strong>76% – 100%</strong>: 🟩 Goed – volwassen vastgoedorganisatie</li>
+        </ul>
+        <br>
+        Wil je op basis van deze score samen onderzoeken waar de grootste kansen liggen voor verbetering of professionalisering van vastgoedbeheer?
+        <br><br>
+        👉 Neem vrijblijvend contact met ons op voor een gesprek of een maatwerkvoorstel.
+      </div>
+      <a class="contact-link" href="https://www.bakermatvm.nl/contact" target="_blank">Plan een kennismakingsgesprek</a><br><br>
+      <a class="contact-link" href="https://www.bakermatvm.nl/offerte-aanvragen" target="_blank" style="background:#00695c;">Vraag een offerte aan</a>
+    </div>
+
+  </div>
+  <script>
+    let totalScore = 0;
+    const totalQuestions = 136;
+
+    function answer(step, score) {
+      totalScore += score;
+      document.getElementById('a' + step).classList.add('hidden');
+      if (step + 1 < totalQuestions) {
+        document.getElementById('q' + (step + 1)).classList.remove('hidden');
+        document.getElementById('a' + (step + 1)).classList.remove('hidden');
+      } else {
+        showScore();
+      }
+    }
+
+    function showScore() {
+      const percentage = totalScore / (totalQuestions * 100) * 100;
+      let feedback = '';
+      if (percentage < 30) feedback = '🟥 Crisisniveau – een stevige verbeterslag is nodig.';
+      else if (percentage < 50) feedback = '🟧 Verbetertraject noodzakelijk – veel potentieel onbenut.';
+      else if (percentage < 75) feedback = '🟨 Voldoende – er zijn duidelijke ontwikkelpunten.';
+      else feedback = '🟩 Goed – jullie vastgoedbeheer is volwassen ingericht.';
+      
+    let advies = '';
+    if (percentage < 30) advies = 'We raden aan om op korte termijn te starten met het herstructureren van vastgoedprocessen en verantwoordelijkheden.';
+    else if (percentage < 50) advies = 'Er is veel ruimte voor verbetering. We adviseren een quickscan of adviesgesprek om prioriteiten te bepalen.';
+    else if (percentage < 75) advies = 'De basis staat, maar er zijn zichtbare ontwikkelkansen. Een verbetersessie kan richting geven.';
+    else advies = 'Goed op weg! Mogelijk zijn er nog optimalisaties in data, duurzaamheid of samenwerking.';
+    
+document.getElementById('scoreText').innerHTML = '🎯 Je totaalscore is <strong>' + percentage.toFixed(1) + '%</strong><br>' + feedback + '<br><br><em>' + advies + '</em>'; '🎯 Je totaalscore is <strong>' + percentage.toFixed(1) + '%</strong><br>' + feedback;
+      document.getElementById('scoreBox').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
